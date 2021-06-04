@@ -1,7 +1,7 @@
 /*Fondo y apariencia general*/
-body{
-background-image: url(https://image.freepik.com/foto-gratis/cielo-azul-nublado-dia-soleado_6351-1319.jpg);
-background-repeat: no-repeat;
-background-size: cover;
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
 }
-
