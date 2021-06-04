@@ -1,5 +1,11 @@
 # Memory Match Game
 
+##Historias de usuario
+
+#1- Hola, soy Sebastian, tengo 8 años, me gustan los monos Ghibli, y siempre estoy buscando juegos de mis personajes favoritos y que a la vez pueda aprender de ellos, para entretenerme en un nivel basico.
+
+#2- Mi nombre es Vanesa, soy la madre de Sebastian, y como madre siempre me preocupa que mi hijo este jugando juegos adecuados a su edad, en cuanto a los niveles de dificultad y al manejo acorde de dicho juego.
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
