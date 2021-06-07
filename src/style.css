@@ -5,15 +5,26 @@
 
 /*Fondo y apariencia general*/
 body{
-margin: 0%;
-padding: 0%;
-background-image: url(./images/fondo1\ 1.png);
-background-repeat: no-repeat;
-background-size: cover;
-align-items: center;
-justify-content: center;
-display: flex;
-font-family:'Source Code Pro', monospace;
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family:'Source Code Pro', monospace;
+}
+
+.grid{
+    position: absolute;
+    width: 486px;
+    height: 674px;
+    left: 475px;
+    top: 139px;
+
+    background: #00A5C3;
+    border-radius: 22px;
 }
 
 
