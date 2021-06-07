@@ -1,3 +1,8 @@
+/*variables a utilizar*/
+:root{
+--border-round: 100%;
+}
+
 /*Fondo y apariencia general*/
 body{
 margin: 0%;
@@ -10,48 +15,4 @@ justify-content: center;
 display: flex;
 font-family:'Source Code Pro', monospace;
 }
-
-
-/*Titulo pag. principa
-.logo{
-display: flex;   
-justify-content: center;
-}
-
-#pokemonTitle{
-position: relative;
-width: auto;
-height: auto;
-max-width: 65%;
-max-height: 15%;
-}
-
-/*Boton pag. principa
-.containerButton{
-display: flex;   
-justify-content: center;
-}
-/*Boton play
-#play{
-background-image: url(./imagenes/fondo1\ 1.png);
-border-radius: var(--border-round);
-font-size: 200%;
-color: #295cb3;
-border: 10px solid #295cb3;
-cursor: pointer;
-padding: 3%;
--webkit-transition-duration: 0.5s;
-transition-duration: 0.5s;
-width: 200px;
-font-family:'Orbitron', sans-serif;
-}
-
-#play:hover{
-background-color: #FDFEFE;
-color: var(--terminal-color);
-border: 10px solid #0a0a0a;    
-}
-
-
-
 
