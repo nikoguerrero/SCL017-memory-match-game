@@ -1,7 +1,22 @@
-/*Fondo y apariencia general*/
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
-    width: 400px;
+/*variables a utilizar*/
+:root{
+--border-round: 100%;
 }
+
+/*Fondo y apariencia general*/
+body{
+margin: 0%;
+padding: 0%;
+background-image: url(./images/fondo1\ 1.png);
+background-repeat: no-repeat;
+background-size: cover;
+align-items: center;
+justify-content: center;
+display: flex;
+font-family:'Source Code Pro', monospace;
+}
+
+
+
+
+
