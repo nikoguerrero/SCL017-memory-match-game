@@ -18,6 +18,28 @@ import pokemon from '../data/pokemon/pokemon.js';
 //
 const data = pokemon.items;
 
+function shuffle(data) {
+  let gameCards = [];
+
+  while(gameCards.length < 12) {
+    for(let i = 0; i < 6; i++) {
+      let j = Math.floor(Math.random() * 9);
+      if(gameCards.indexOf(data[j]) === -1) {
+        gameCards.push(data[j], data[j]);
+        break;
+      }
+    }
+  }
+
+  for(let i = gameCards.length - 1; i >= 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    let temp = gameCards[i];
+    gameCards[i] = gameCards[j];
+    gameCards[j] = temp;
+  }
+  
+  return gameCards;
+}
 
 const App = () => {
   
@@ -38,33 +60,29 @@ const App = () => {
   grid.className = 'grid';
   section.appendChild(grid);
 
-  let gameCards = [];
+  let boardCards = document.createElement('div');
+  boardCards.className = 'boardCards';
+  grid.appendChild(boardCards);
+
+  const shuffleCards = shuffle(data);
+
+  const chosenCards = [];
+
+  function flipCard(event){
+    chosenCards.push(event.target.id);
+    console.log(chosenCards);
+  }
   
-  //iteración de 12 cartas (pares) para este nivel.
-  while(gameCards.length < 12) {
-    for(let i = 0; i < 6; i++) {
-      let j = Math.floor(Math.random() * 9);
-      if(gameCards.indexOf(data[j]) === -1) {
-        gameCards.push(data[j], data[j]);
-        break;
-      }
-    }
-  }
-  console.log(gameCards);
 
-  for(let i = gameCards.length - 1; i >= 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    let temp = gameCards[i];
-    gameCards[i] = gameCards[j];
-    gameCards[j] = temp;
-
-    
-    let card = document.createElement('img');
-    card.setAttribute('src', gameCards[i].image);
-    card.setAttribute('data-id', gameCards[i]);
-    // card.addEventListener('click', flipCard)
-    grid.appendChild(card)
+  for(let i = shuffleCards.length - 1; i >= 0; i--) {
+    let backCard = document.createElement('img');
+    backCard.className = 'backCard';
+    backCard.src = '/images/backcardlogo.png';
+    backCard.id = shuffleCards[i].id;
+    boardCards.appendChild(backCard);
+    backCard.addEventListener('click', flipCard);
   }
+
 
   return content;
 };
