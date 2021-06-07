@@ -1,21 +1,8 @@
-/*variables a utilizar*/
-:root{
---border-round: 100%;
-}
-
 /*Fondo y apariencia general*/
-<<<<<<< HEAD
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    height: 300px;
-    width: 400px;
-}
-=======
 body{
 margin: 0%;
 padding: 0%;
-background-image: url(./imagenes/fondo1\ 1.png);
+background-image: url(./images/fondo1\ 1.png);
 background-repeat: no-repeat;
 background-size: cover;
 align-items: center;
@@ -24,7 +11,8 @@ display: flex;
 font-family:'Source Code Pro', monospace;
 }
 
-/*Titulo pag. principa*/
+
+/*Titulo pag. principa
 .logo{
 display: flex;   
 justify-content: center;
@@ -38,12 +26,12 @@ max-width: 65%;
 max-height: 15%;
 }
 
-/*Boton pag. principa*/
+/*Boton pag. principa
 .containerButton{
 display: flex;   
 justify-content: center;
 }
-/*Boton play*/
+/*Boton play
 #play{
 background-image: url(./imagenes/fondo1\ 1.png);
 border-radius: var(--border-round);
@@ -66,4 +54,4 @@ border: 10px solid #0a0a0a;
 
 
 
->>>>>>> 1f3ea17 (cambios prueba)
+
