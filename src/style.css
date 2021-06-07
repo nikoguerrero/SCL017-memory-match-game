@@ -1,8 +1,3 @@
-/*variables a utilizar*/
-:root{
---border-round: 100%;
-}
-
 /*Fondo y apariencia general*/
 body{
     margin: 0%;
@@ -27,7 +22,24 @@ body{
     border-radius: 22px;
 }
 
+/*Grilla de cartas*/
+.grid{
+position: absolute;
+width: 486px;
+height: 674px;
+left: 475px;
+top: 139px; 
+background: #00A5C3;
+}
 
-
+/*Titulo*/
+header{
+background-image: url(./images/titulo.png); 
+height: 200px;
+width: 600px;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+}
 
 
