@@ -32,7 +32,6 @@ function shuffle(data) {
 
 const gamedisplay = () => {
   
-  //esqueleto html general
   const content = document.createElement('div');
   
   const gameBox = document.createElement('section');
@@ -51,12 +50,24 @@ const gamedisplay = () => {
 
   const chosenCards = [];
 
+  // función girar tarjeta (parcialmente implementada)
   function flipCard(event){
     chosenCards.push(event.target.id);
+    if(chosenCards.length === 2) {
+      matchCard();
+      chosenCards.length = 0;
+    }
     console.log(chosenCards);
   }
-  
 
+  //función compara match (con alerta que indica match por ahora)
+  function matchCard(){
+    if(chosenCards[0] === chosenCards[1]) {
+      alert('cartas hacen match');
+    }
+  }
+  
+  //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let backCard = document.createElement('img');
     backCard.src = shuffleCards[i].image;
