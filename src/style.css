@@ -1,45 +1,57 @@
 /*Fondo y apariencia general*/
 body{
-    margin: 0%;
-    padding: 0%;
-    background-image: url(./images/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-family:'Source Code Pro', monospace;
+margin: 0%;
+padding: 0%;
+background-image: url(./images/background.png);
+background-repeat: no-repeat;
+background-size: cover;
+align-items: center;
+display: flex;
+justify-content: center;
+font-family:'Source Code Pro', monospace;
 }
-
-.grid{
-    position: absolute;
-    width: 486px;
-    height: 674px;
-    left: 475px;
-    top: 139px;
-
-    background: #00A5C3;
-    border-radius: 22px;
-}
-
 /*Grilla de cartas*/
 .grid{
 position: absolute;
 width: 486px;
 height: 674px;
 left: 475px;
-top: 139px; 
+top: 139px;
 background: #00A5C3;
+border-radius: 22px;
+cursor: pointer;
 }
 
 /*Titulo*/
 header{
-background-image: url(./images/titulo.png); 
+background-image: url(./images/title.png); 
 height: 200px;
 width: 600px;
 background-repeat: no-repeat;
 display: flex;
 justify-content: center;
 }
+
+/*Boton Jugar*/
+.buttonPlay{
+background-image: url(./images/background.png);
+display: flex;
+justify-content: center;
+cursor: pointer;
+font-size: 200%;
+color: #000000;
+border-radius: 100%;
+padding: 4%;
+border: 10px solid #000000;
+font-family:  'Orbitron', sans-serif;
+transition-duration: 0.5s;
+-webkit-transition-duration: 0.5s;
+}
+
+.buttonPlay:hover{
+color: white;
+border: 10px solid white;
+}
+
 
 
