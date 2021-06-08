@@ -1,0 +1,51 @@
+{
+    "name": "Howl",
+    "items": [
+      {
+        "id": "calucipher",
+        "image": "https://www.serebii.net/pokemongo/pokemon/001.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "calcipher2",
+        "image": "https://www.serebii.net/pokemongo/pokemon/002.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "castle",
+        "image": "https://www.serebii.net/pokemongo/pokemon/003.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "dog",
+        "image": "https://www.serebii.net/pokemongo/pokemon/004.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "howl",
+        "image": "https://www.serebii.net/pokemongo/pokemon/005.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "markl",
+        "image": "https://www.serebii.net/pokemongo/pokemon/006.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "sophie",
+        "image": "https://www.serebii.net/pokemongo/pokemon/007.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "thewitch",
+        "image": "https://www.serebii.net/pokemongo/pokemon/008.png",
+        "bgColor": "#ffffff"
+      },
+      {
+        "id": "turniphead",
+        "image": "https://www.serebii.net/pokemongo/pokemon/009.png",
+        "bgColor": "#ffffff"
+      }
+    ]
+  }
+  
