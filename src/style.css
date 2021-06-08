@@ -1,57 +1,79 @@
 /*Fondo y apariencia general*/
 body{
-margin: 0%;
-padding: 0%;
-background-image: url(./images/background.png);
-background-repeat: no-repeat;
-background-size: cover;
-align-items: center;
-display: flex;
-justify-content: center;
-font-family:'Source Code Pro', monospace;
-}
-/*Grilla de cartas*/
-.grid{
-position: absolute;
-width: 486px;
-height: 674px;
-left: 475px;
-top: 139px;
-background: #00A5C3;
-border-radius: 22px;
-cursor: pointer;
+    margin: 0%;
+    padding: 0%;
+    background-image: url(./images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family:'Source Code Pro', monospace;
 }
 
 /*Titulo*/
-header{
-background-image: url(./images/title.png); 
-height: 200px;
-width: 600px;
-background-repeat: no-repeat;
-display: flex;
-justify-content: center;
+.header{
+    background-image: url(./images/title.png); 
+    width: 486px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+/* Caja de contenido cambiante */
+.section{
+    width: 486px;
+    height: 674px;
+}
+
+/* Caja de contenido intro */
+.introBox{
+    width: 486px;
+    height: 674px;
 }
 
 /*Boton Jugar*/
 .buttonPlay{
-background-image: url(./images/background.png);
-display: flex;
-justify-content: center;
-cursor: pointer;
-font-size: 200%;
-color: #000000;
-border-radius: 100%;
-padding: 4%;
-border: 10px solid #000000;
-font-family:  'Orbitron', sans-serif;
-transition-duration: 0.5s;
--webkit-transition-duration: 0.5s;
+    background-image: url(./images/background.png);
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 200%;
+    color: #000000;
+    border-radius: 100%;
+    padding: 4%;
+    border: 10px solid #000000;
+    font-family:  'Orbitron', sans-serif;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
 }
 
 .buttonPlay:hover{
-color: white;
-border: 10px solid white;
+    color: white;
+    border: 10px solid white;
 }
 
+/* Tablero de cartas */
+.gameBox{
+    width: 486px;
+    height: 674px;
+}
+
+/*Grilla de cartas*/
+.grid{
+    display: flex;
+    width: 486px;
+    height: 674px;
+    left: 475px;
+    top: 139px;
+    background: #00A5C3;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+/* .boardCards{
+
+} */
 
 
