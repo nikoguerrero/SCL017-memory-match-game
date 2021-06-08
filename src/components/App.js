@@ -51,7 +51,6 @@ const App = () => {
   header.className = 'header';
   content.appendChild(header);
 
-
   const section = document.createElement('section');
   content.appendChild(section);
 
