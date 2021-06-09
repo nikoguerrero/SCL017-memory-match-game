@@ -69,11 +69,15 @@ const gamedisplay = () => {
   
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
+    let card = document.createElement('div');
+    card.className = 'card';
+    boardCards.appendChild(card);
+
     let backCard = document.createElement('img');
-    backCard.src = shuffleCards[i].image;
+    backCard.src = 'images/backcard.png';
     backCard.className = 'backCard';
     backCard.id = shuffleCards[i].id;
-    boardCards.appendChild(backCard);
+    card.appendChild(backCard);
     backCard.addEventListener('click', flipCard);
   }
 
