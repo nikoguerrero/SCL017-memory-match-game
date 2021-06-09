@@ -35,16 +35,21 @@ const gamedisplay = () => {
   const content = document.createElement('div');
   
   const gameBox = document.createElement('section');
-  gameBox.className = 'section';
+  gameBox.className = 'gameBox';
   content.appendChild(gameBox); //gameBox es hijo de content
 
-  let grid = document.createElement('div');
+  const grid = document.createElement('div');
   grid.className = 'grid';
   gameBox.appendChild(grid); //grid es hijo de gameBox
 
-  let boardCards = document.createElement('div');
+  const boardCards = document.createElement('div');
   boardCards.className = 'boardCards';
   grid.appendChild(boardCards); //boardCards es hijo de grid
+
+  const level = document.createElement('footer');
+  level.className = 'level';
+  level.innerText = 'NIVEL 1';
+  gameBox.appendChild(level);
 
   const shuffleCards = shuffle(data);
 
