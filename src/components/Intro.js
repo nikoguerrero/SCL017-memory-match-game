@@ -29,7 +29,7 @@ const Intro = () => {
 
     const castle = document.createElement('img');
     castle.className = 'castleOne';
-    castle.src = '/images/castle.png';
+    castle.src = '/images/castle.gif';
     introBox.appendChild(castle);   //castillo es hijo de introBox
 
 
