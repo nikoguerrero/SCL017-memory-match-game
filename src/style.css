@@ -1,4 +1,4 @@
-@import url('http://themes.googleusercontent.com/static/fonts/fredokaone/v1/SL0aFUFfkFMMdariYQ3_YZ0EAVxt0G0biEntp43Qt6E.ttf');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 
 
@@ -17,7 +17,7 @@ body{
     /* overflow: hidden; */
 }
 .container{
-    max-width: fit-content;
+    min-width: 100px;
 }
 
 /*Titulo*/
@@ -107,14 +107,10 @@ body{
 }
 
 .level{
-
-    top: 821px;
-
     font-family: 'Fredoka One';
     font-size: 1.9rem;
     text-align: center;
     color: #FFCD1C;
-    -webkit-text-stroke: 2px #578190;
     margin-top:10px;
     margin-bottom:10px;
 }

@@ -30,7 +30,7 @@ function shuffle(data) {
   return gameCards;
 }
 
-const gamedisplay = () => {
+const GameDisplay = () => {
   
   const content = document.createElement('div');
   
@@ -57,7 +57,18 @@ const gamedisplay = () => {
 
   // función girar tarjeta (parcialmente implementada)
   function flipCard(event){
-    chosenCards.push(event.target.id);
+    chosenCards.push(event.target);
+    let chosenOne = event.target;
+    const findCard = (element) => {
+      if(element.id === chosenOne.id) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    let found = shuffleCards.find(findCard);
+    chosenOne.src = found.image;
+
     if(chosenCards.length === 2) {
       matchCard();
       chosenCards.length = 0;
@@ -68,10 +79,14 @@ const gamedisplay = () => {
   //función compara match (con alerta que indica match por ahora)
   function matchCard(){
     if(chosenCards[0] === chosenCards[1]) {
-      alert('cartas hacen match');
+      alert('hiciste match');
+    } else {
+      for(let i = 0; i < chosenCards.length; i++) {
+        chosenCards[i].src = 'images/backcard.png';
+      }
     }
   }
-  
+ 
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let card = document.createElement('div');
@@ -87,7 +102,7 @@ const gamedisplay = () => {
   }
 
 
-  return content;
+  return gameBox;
 };
 
-export default gamedisplay;
+export default GameDisplay;
