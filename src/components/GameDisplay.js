@@ -66,23 +66,28 @@ const GameDisplay = () => {
         return false;
       }
     };
+
     let found = shuffleCards.find(findCard);
     chosenOne.src = found.image;
+    chosenOne.className = 'frontCard';
 
     if(chosenCards.length === 2) {
-      matchCard();
+      setTimeout(matchCard(), 500);
       chosenCards.length = 0;
+    } else {
+
     }
     console.log(chosenCards);
   }
 
   //función compara match (con alerta que indica match por ahora)
   function matchCard(){
-    if(chosenCards[0] === chosenCards[1]) {
+    if(chosenCards[0].id === chosenCards[1].id) {
       alert('hiciste match');
     } else {
       for(let i = 0; i < chosenCards.length; i++) {
         chosenCards[i].src = 'images/backcard.png';
+        chosenCards[i].className = 'backCard';
       }
     }
   }

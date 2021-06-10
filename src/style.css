@@ -6,7 +6,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    
+    height: auto;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +42,6 @@ body{
     width: 486px;
     height: 674px;
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
 }
 
@@ -52,6 +51,16 @@ body{
     position: relative;
     animation: float 5s infinite;
     cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+.castleOne:hover{
+    opacity:0.9;
+}
+
+.castleOne:active{
+    color:red;
 }
 
 @keyframes float {
@@ -110,11 +119,13 @@ body{
 }
 
 .card{
+    
     width: 120px;
     height: 140px;
     border: 1px solid #578190;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .backCard{
@@ -122,6 +133,14 @@ body{
     justify-content: center;
     align-items: center;
     background: #F4C9B1;
+    border-radius: 10px;
+}
+
+.frontCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFF;
     border-radius: 10px;
 }
 
