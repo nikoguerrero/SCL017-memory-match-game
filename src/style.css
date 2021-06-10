@@ -126,13 +126,10 @@ body{
 }
 
 @keyframes float {
-    0% {top: 0px;}    
-      
-    25% {top: 25px;}   
+    0% {transform: translatey(0px);}
+    50% {transform: translatey(-20px);}
+    100% {transform: translatey(0px);}
     
-    50% {top: 50px;}
-
-    50% {top: 0px;}            
 }
 
 @media screen and (max-width: 480px){
