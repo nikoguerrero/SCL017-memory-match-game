@@ -21,18 +21,18 @@ const Intro = () => {
     introBox.className = 'introBox';
     content.appendChild(introBox); //introBox es hijo de content
 
+    const castle = document.createElement('img');
+    castle.className = 'castleOne';
+    castle.src = '/images/castle.png';
+    introBox.appendChild(castle);   //castillo es hijo de introbox
+
     const btn = document.createElement('button');
     btn.innerHTML = 'Jugar';
     btn.className = 'buttonPlay';
     btn.addEventListener('click', play);
     introBox.appendChild(btn);  //btn es hijo de introBox
 
-    const castle = document.createElement('img');
-    castle.className = 'castleOne';
-    castle.src = '/images/castle.gif';
-    introBox.appendChild(castle);   //castillo es hijo de introBox
-
-
+    
     return content;
 
 };
