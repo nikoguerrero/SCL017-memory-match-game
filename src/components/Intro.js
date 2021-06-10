@@ -24,13 +24,13 @@ const Intro = () => {
     const castle = document.createElement('img');
     castle.className = 'castleOne';
     castle.src = '/images/castle.png';
+    castle.addEventListener('click', play);
     introBox.appendChild(castle);   //castillo es hijo de introbox
 
-    const btn = document.createElement('button');
-    btn.innerHTML = 'Jugar';
-    btn.className = 'buttonPlay';
-    btn.addEventListener('click', play);
-    introBox.appendChild(btn);  //btn es hijo de introBox
+    // const btn = document.createElement('button');
+    // btn.innerHTML = 'Jugar';
+    // btn.className = 'buttonPlay';
+    // introBox.appendChild(btn);  //btn es hijo de introBox
 
     
     return content;

@@ -6,6 +6,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    /* height:100vh; */
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,8 +46,22 @@ body{
     align-items: center;
 }
 
+/*Animación del botón castillo*/
+.castleOne{
+    display: flex;
+    position: relative;
+    animation: float 5s infinite;
+    cursor: pointer;
+}
+
+@keyframes float {
+    0% {transform: translatey(0px);}
+    50% {transform: translatey(-20px);}
+    100% {transform: translatey(0px);}
+}
+
 /*Boton Jugar*/
-.buttonPlay{
+/* .buttonPlay{
     background-image: url(./images/background.png);
     display: flex;
     cursor: pointer;
@@ -65,8 +80,8 @@ body{
     -webkit-transform: scale(1.4);transform: scale(1.4);
     background-image: url(./images/juego3.png);
     color: white;
-    border: 4px solid white;
-}
+    border: 4px solid white; 
+} */
 
 /* Tablero de cartas */
 .gameBox{
@@ -118,22 +133,10 @@ body{
     margin-top:10px;
     margin-bottom:10px;
 }
-/*Animacion del castillo*/
-.castleOne{
-    display: flex;
-    position: relative;
-    animation: float 5s infinite;
-}
-
-@keyframes float {
-    0% {transform: translatey(0px);}
-    50% {transform: translatey(-20px);}
-    100% {transform: translatey(0px);}
-    
-}
 
 @media screen and (max-width: 480px){
   body{
-      background-color: yellow;
+    
+    height:100vh;
   }  
 }
