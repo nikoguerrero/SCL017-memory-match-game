@@ -72,8 +72,7 @@ const GameDisplay = () => {
     chosenOne.className = 'frontCard';
 
     if(chosenCards.length === 2) {
-      setTimeout(matchCard(), 500);
-      chosenCards.length = 0;
+      setTimeout(matchCard, 500);
     } else {
 
     }
@@ -90,6 +89,7 @@ const GameDisplay = () => {
         chosenCards[i].className = 'backCard';
       }
     }
+    chosenCards.length = 0;
   }
  
   //display de cartas en pantalla (iteración)
