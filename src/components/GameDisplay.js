@@ -52,29 +52,29 @@ const GameDisplay = () => {
   gameBox.appendChild(level);
 
   const shuffleCards = shuffle(data);
+  const chosenCards = []; //se guardan las cartas cliqueadas
+  const cardsMatched = []; //se guardan las cartas que hicieronn match
 
-  const chosenCards = [];
-
-  // función girar tarjeta (parcialmente implementada)
+  // función girar tarjeta
   function flipCard(event){
-    chosenCards.push(event.target);
-    let chosenOne = event.target;
-    const findCard = (element) => {
-      if(element.id === chosenOne.id) {
-        return true;
-      } else {
-        return false;
-      }
-    };
+    if(chosenCards.length < 2 && !chosenCards.includes(event.target) && !cardsMatched.includes(event.target)) {
+      chosenCards.push(event.target);
+      let chosenOne = event.target;
+      const findCard = (element) => {
+        if(element.id === chosenOne.id) {
+          return true;
+        } else {
+          return false;
+        }
+      };
 
-    let found = shuffleCards.find(findCard);
-    chosenOne.src = found.image;
-    chosenOne.className = 'frontCard';
+      let found = shuffleCards.find(findCard);
+      chosenOne.src = found.image;
+      chosenOne.className = 'frontCard';
 
-    if(chosenCards.length === 2) {
-      setTimeout(matchCard, 500);
-    } else {
-
+      if(chosenCards.length === 2) {
+        setTimeout(matchCard, 500);
+      } 
     }
     console.log(chosenCards);
   }
@@ -83,6 +83,10 @@ const GameDisplay = () => {
   function matchCard(){
     if(chosenCards[0].id === chosenCards[1].id) {
       alert('hiciste match');
+      for(let i = 0; i < chosenCards.length; i++) {
+        cardsMatched.push(chosenCards[i]);
+      }
+      console.log(cardsMatched);
     } else {
       for(let i = 0; i < chosenCards.length; i++) {
         chosenCards[i].src = 'images/backcard.png';

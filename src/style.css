@@ -153,7 +153,7 @@ body{
     margin-bottom:10px;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 372px){
   body{
     height:100vh;
   }  
