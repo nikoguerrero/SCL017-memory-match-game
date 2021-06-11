@@ -60,7 +60,7 @@ const GameDisplay = () => {
       chosenCards.push(target);
       target.classList.toggle('is-flipped');
       if(chosenCards.length === 2) {
-        setTimeout(matchCard, 1000);
+        setTimeout(matchCard, 600);
       } 
     }
     console.log(chosenCards);
@@ -92,13 +92,6 @@ const GameDisplay = () => {
     card.addEventListener('click', function(event) {
       flipCard(event.target.parentElement);
     });
-
-    // let backCard = document.createElement('img');
-    // backCard.src = 'images/backcard.png';
-    // backCard.className = 'backCard';
-    // backCard.id = shuffleCards[i].id;
-    // card.appendChild(backCard);
-    // backCard.addEventListener('click', flipCard);
 
     let backCard = document.createElement('img');
     backCard.className = 'backCard';

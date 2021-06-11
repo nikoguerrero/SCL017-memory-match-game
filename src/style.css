@@ -131,10 +131,10 @@ body{
 }
 
 @keyframes shake {
-    0% {transform: rotateZ(0deg) rotateY(180deg);}
-    25% {transform: rotateZ(5deg) rotateY(180deg);}
-    50% {transform: rotateZ(-5deg) rotateY(180deg);}
-    100% {transform: rotateZ(0deg) rotateY(180deg);}
+    0% {transform: rotateZ(0deg) rotateY(180deg) scale(1)}
+    25% {transform: rotateZ(5deg) rotateY(180deg) scale(1.1);}
+    50% {transform: rotateZ(-5deg) rotateY(180deg) scale(1.1);}
+    100% {transform: rotateZ(0deg) rotateY(180deg) scale(1);}
 }
 
 
@@ -155,7 +155,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFFF;
+    background: #F1F3DE;
     border-radius: 10px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -172,13 +172,13 @@ body{
 }
 
 /* iPad y KindleFire */
-/* @media (min-width:375px) and (max-width: 880px) { 
+@media (min-width:375px) and (max-width: 880px) { 
   body{
     height:100vh;
   }  
 }
 
-@media (min-width:100px) and (max-width: 375px){ 
+/* @media (min-width:100px) and (max-width: 375px){ 
   body{
     height:100vh;
   }  
@@ -189,14 +189,6 @@ body{
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-}
-
 } */
 
-/* .flipCard {
-    transform: rotateY(180deg);
-    transition: transform 1s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-} */
 
