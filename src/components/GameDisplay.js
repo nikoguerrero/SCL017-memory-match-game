@@ -1,7 +1,4 @@
 
-// import pokemon from '../data/pokemon/pokemon.js';
-
-// const data = pokemon.items;
 
 import howl from '../data/howl/howl.js';
 
@@ -56,24 +53,14 @@ const GameDisplay = () => {
   const cardsMatched = []; //se guardan las cartas que hicieronn match
 
   // función girar tarjeta
-  function flipCard(event){
-    if(chosenCards.length < 2 && !chosenCards.includes(event.target) && !cardsMatched.includes(event.target)) {
-      chosenCards.push(event.target);
-      let chosenOne = event.target;
-      const findCard = (element) => {
-        if(element.id === chosenOne.id) {
-          return true;
-        } else {
-          return false;
-        }
-      };
+  function flipCard(target){
 
-      let found = shuffleCards.find(findCard);
-      chosenOne.src = found.image;
-      chosenOne.className = 'frontCard';
-
+    //Limita el array a dos elementos. Evita hacer match con la misma carta. Y evita volver a acceder a las cartas que ya hicieron
+    if(chosenCards.length < 2 && !chosenCards.includes(target) && !cardsMatched.includes(target)) {
+      chosenCards.push(target);
+      target.classList.toggle('is-flipped');
       if(chosenCards.length === 2) {
-        setTimeout(matchCard, 500);
+        setTimeout(matchCard, 1000);
       } 
     }
     console.log(chosenCards);
@@ -82,32 +69,50 @@ const GameDisplay = () => {
   //función compara match (con alerta que indica match por ahora)
   function matchCard(){
     if(chosenCards[0].id === chosenCards[1].id) {
-      alert('hiciste match');
+      // alert('hiciste match');
       for(let i = 0; i < chosenCards.length; i++) {
         cardsMatched.push(chosenCards[i]);
+        chosenCards[i].classList.add('is-matched');
       }
       console.log(cardsMatched);
     } else {
       for(let i = 0; i < chosenCards.length; i++) {
-        chosenCards[i].src = 'images/backcard.png';
-        chosenCards[i].className = 'backCard';
+        chosenCards[i].classList.toggle('is-flipped');
       }
     }
     chosenCards.length = 0;
   }
  
+
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let card = document.createElement('div');
     card.className = 'card';
-    boardCards.appendChild(card);
+    card.id = shuffleCards[i].id;
+    card.addEventListener('click', function(event) {
+      flipCard(event.target.parentElement);
+    });
+
+    // let backCard = document.createElement('img');
+    // backCard.src = 'images/backcard.png';
+    // backCard.className = 'backCard';
+    // backCard.id = shuffleCards[i].id;
+    // card.appendChild(backCard);
+    // backCard.addEventListener('click', flipCard);
 
     let backCard = document.createElement('img');
-    backCard.src = 'images/backcard.png';
     backCard.className = 'backCard';
-    backCard.id = shuffleCards[i].id;
+    backCard.src = 'images/backcard.png';
     card.appendChild(backCard);
-    backCard.addEventListener('click', flipCard);
+
+    let frontCard = document.createElement('img');
+    frontCard.className = 'frontCard';
+    frontCard.src = shuffleCards[i].image;
+    card.appendChild(frontCard);
+
+    boardCards.appendChild(card);
+
+
   }
 
 

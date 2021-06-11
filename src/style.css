@@ -30,13 +30,6 @@ body{
     justify-content: center;
 }
 
-/* Caja de contenido cambiante */
-/* .section{
-    width: 486px;
-    height: 674px; 
-    min-height: 200px;
-} */
-
 /* Caja de contenido intro */
 .introBox{
     width: 486px;
@@ -112,36 +105,61 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 1em;
-
     margin: auto;
     align-items: center;
     width: 100%;
 }
 
 .card{
-    
     width: 120px;
     height: 140px;
     border: 1px solid #578190;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.0, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
 }
 
+.card.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.card.is-matched{
+    animation: shake 0.3s; 
+    animation-timing-function: cubic-bezier(0.0, -0.55, 0.265, 1.55);
+}
+
+@keyframes shake {
+    0% {transform: rotateZ(0deg) rotateY(180deg);}
+    25% {transform: rotateZ(5deg) rotateY(180deg);}
+    50% {transform: rotateZ(-5deg) rotateY(180deg);}
+    100% {transform: rotateZ(0deg) rotateY(180deg);}
+}
+
+
 .backCard{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #F4C9B1;
     border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
 }
 
 .frontCard{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #FFFF;
     border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 .level{
@@ -153,8 +171,32 @@ body{
     margin-bottom:10px;
 }
 
-@media screen and (max-width: 372px){
+/* iPad y KindleFire */
+/* @media (min-width:375px) and (max-width: 880px) { 
   body{
     height:100vh;
   }  
 }
+
+@media (min-width:100px) and (max-width: 375px){ 
+  body{
+    height:100vh;
+  }  
+  .header {
+    background-image: url(./images/title.png); 
+    width: 100px;
+    height: 150px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+} */
+
+/* .flipCard {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+} */
+

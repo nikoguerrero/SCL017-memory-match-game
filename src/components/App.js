@@ -1,7 +1,4 @@
 
-import pokemon from '../data/pokemon/pokemon.js';
- console.log(pokemon.items);
-
 import Intro from './Intro.js';
 
 
@@ -13,10 +10,7 @@ const App = () => {
   header.className = 'header';
   content.appendChild(header);
 
-  // const section = document.createElement('section');
-  // section.className = 'section';
-  // content.appendChild(section);
-  
+
   return Intro();
   
 };
