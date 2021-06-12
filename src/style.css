@@ -6,7 +6,6 @@
 body{
     margin: 0px;
     padding: 0px;
-    height: auto;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,33 +56,10 @@ body{
 }
 
 @keyframes float {
-    0% {transform: translatey(0px);}
-    50% {transform: translatey(-20px);}
-    100% {transform: translatey(0px);}
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
 }
-
-/*Boton Jugar*/
-/* .buttonPlay{
-    background-image: url(./images/background.png);
-    display: flex;
-    cursor: pointer;
-    font-size: 30px;
-    color: #000000;
-    border-radius: 100px;
-    padding: 7%;
-    border: 4px solid #000000;
-    overflow: hidden;
-    transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    
-}
-
-.buttonPlay:hover{
-    -webkit-transform: scale(1.4);transform: scale(1.4);
-    background-image: url(./images/juego3.png);
-    color: white;
-    border: 4px solid white; 
-} */
 
 /* Tablero de cartas */
 .gameBox{
@@ -177,18 +153,92 @@ body{
     height:100vh;
   }  
 }
-
-/* @media (min-width:100px) and (max-width: 375px){ 
-  body{
-    height:100vh;
-  }  
-  .header {
-    background-image: url(./images/title.png); 
-    width: 100px;
-    height: 150px;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
+/* @media (max-height: 775px) { 
+body{
+   height:100vh;
+}
 } */
 
+@media (max-width: 375px){ 
+    body{
+        background-image: url(./images/mediaquerybackground.png);
+        height:100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        overflow:hidden;
+        }
+    
+    .header {
+        background-image: url(./images/title.png); 
+        background-size: 300px;
+        background-position: center;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: right;
+        align-items:center;
+        }
 
+
+    .introBox{
+        width: 300px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .castleOne{
+        display: flex;
+        position: relative;
+        animation: float 5s infinite;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+    }
+
+    .gameBox{
+        position:relative;
+        width: 350px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .grid{
+        position:top;
+        width: 500px;
+        height: 500px;
+        background: none;
+        border-radius: 22px;
+    }
+
+    .card{
+        width: 86px;
+        height: 100px;
+    }
+
+    .backCard{
+        max-width:100%;
+        max-height:100%;
+    }
+    
+    .frontCard{
+        max-width:100%;
+        max-height:100%;
+    }
+
+    .level{
+        position:absolute;
+        bottom: 0;
+        width:375px;
+        text-align: center;
+        font-size: 1.2rem;
+        justify-content: center;
+    }
+
+
+}
