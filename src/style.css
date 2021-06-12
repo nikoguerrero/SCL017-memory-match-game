@@ -173,7 +173,6 @@ body{
         }
     
     .header {
-        background-image: url(./images/title.png); 
         background-size: 300px;
         background-position: center;
         width: 100%;
@@ -203,13 +202,12 @@ body{
     .gameBox{
         position:relative;
         width: 350px;
-        height: 600px;
+        height: 550px;
         display: flex;
-        align-items: center;
+        align-items: top;
     }
     
     .grid{
-        position:top;
         width: 500px;
         height: 500px;
         background: none;
