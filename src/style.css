@@ -6,6 +6,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    /* height: 100vh; */
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,9 +15,17 @@ body{
     justify-content: center;
     font-family:'Fredoka One', normal;
     /* overflow: hidden; */
-}
-.container{
-    min-width: 100px;
+
+    /* Prevenir que seleccione texto */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                supported by Chrome, Edge, Opera and Firefox */
+
+    
 }
 
 /*Titulo*/
@@ -113,7 +122,6 @@ body{
     100% {transform: rotateZ(0deg) rotateY(180deg) scale(1);}
 }
 
-
 .backCard{
     position: absolute;
     display: flex;
@@ -180,8 +188,12 @@ body{
         display: flex;
         justify-content: right;
         align-items:center;
-        }
+        transition: transform 0.5s cubic-bezier(0.0, -0.55, 0.265, 1.55);
+    }
 
+    .header.is-up{
+        transform: translateY(-30px);
+    }
 
     .introBox{
         width: 300px;
@@ -205,6 +217,7 @@ body{
         height: 550px;
         display: flex;
         align-items: top;
+        white-space: nowrap;
     }
     
     .grid{

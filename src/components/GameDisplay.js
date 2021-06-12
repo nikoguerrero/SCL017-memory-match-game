@@ -90,6 +90,7 @@ const GameDisplay = () => {
     card.className = 'card';
     card.id = shuffleCards[i].id;
     card.addEventListener('click', function(event) {
+      event.target.parentElement.classList.toggle('is-selected');
       flipCard(event.target.parentElement);
     });
 
