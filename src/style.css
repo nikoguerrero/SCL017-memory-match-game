@@ -7,6 +7,8 @@ body{
     margin: 0px;
     padding: 0px;
     /* height: 100vh; */
+    height: 100%;
+    width: 100%;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,14 +56,11 @@ body{
     cursor: pointer;
     width: 100%;
     height: auto;
+    transition: width 0.5s, heigth 0.5s;
 }
 
 .castleOne:hover{
-    opacity:0.9;
-}
-
-.castleOne:active{
-    color:red;
+  width: 900px;  
 }
 
 @keyframes float {
@@ -157,9 +156,20 @@ body{
 
 /* iPad y KindleFire */
 @media (min-width:375px) and (max-width: 880px) { 
+/*Responsive en mobiles max 480 px*/
+@media screen and (max-width: 480px){
   body{
-    height:100vh;
-  }  
+    height: 100%;
+    width: 100%;
+    }   
+    .header{
+    width: 100%;
+    }
+    .castleOne{    
+    width: 75%;
+    height: auto;
+    }
+         
 }
 
 /* iPhone X */
