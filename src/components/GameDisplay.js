@@ -86,7 +86,7 @@ const GameDisplay = () => {
 
   //función que muestra resultados al perder
   function displayResultsLost(){
-    if(matchAttempts > 0){
+    if(matchAttempts > 6){
       const scoreDisplay = document.createElement('div');
         scoreDisplay.className = 'scoreDisplay';
         document.getElementById('root').appendChild(scoreDisplay);
