@@ -181,7 +181,7 @@
         background-color: #00A5C3;
         border-radius: 5px;
         text-align: center;
-        z-index: 11; /* 1px higher than the overlay layer */
+        z-index: 11; 
     }
     
     .wonImg{
@@ -252,12 +252,24 @@
     }
 
     .level{
-        position: absolute;
+        position: overlay;
         margin-bottom: 50px;
         width: 300px;
         text-align: center;
         font-size: 1.2rem;
         justify-content: center;
+    }
+
+    .scoreDisplay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        z-index: 10;
     }
 }
 
@@ -301,7 +313,7 @@
     .gameBox{
     position: relative;
     width: 300px;
-    height: 480px;
+    height: 520px;
     display: flex;
     align-items: top;
     }
@@ -319,12 +331,12 @@
     } 
     
     .backCard{
-    max-width:  100%;
+    max-width: 100%;
     max-height: 100%;
     }
     
     .frontCard{
-    max-width:  100%;
+    max-width: 100%;
     max-height: 100%;
     }
 
@@ -333,7 +345,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     justify-content: center;
     }     
 }

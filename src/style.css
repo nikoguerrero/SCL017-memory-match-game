@@ -182,8 +182,17 @@ body{
     z-index: 11; /* 1px higher than the overlay layer */
 }
 
+.lostImg{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    right: 15px;
+    bottom: 10px;
+
+}
+
 .wonImg{
-    position:absolute;
+    position: absolute;
     width: 20%;
     height: auto;
     right: 20px;

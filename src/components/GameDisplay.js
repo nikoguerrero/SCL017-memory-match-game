@@ -45,29 +45,30 @@ const GameDisplay = () => {
     console.log(chosenCards);
   }
 
+  let matchAttempts = 0;
+
   //función compara match (con alerta que indica match por ahora)
   function matchCard(){
     if(chosenCards[0].id === chosenCards[1].id) {
-      // alert('hiciste match');
       for(let i = 0; i < chosenCards.length; i++) {
         cardsMatched.push(chosenCards[i]);
         chosenCards[i].classList.add('is-matched');
       }
-      // displayResults();
+      displayResultsWon();
     } else {
-      for(let i = 0; i < chosenCards.length; i++) {
-        chosenCards[i].classList.toggle('is-flipped');
-      }
+      matchAttempts++;
+      displayResultsLost();
     }
-    displayResults();
+    console.log(matchAttempts);
     chosenCards.length = 0;
   }
 
-  //funcion para mostrar resultados
-  function displayResults() {
-    // if(cardsMatched.length === shuffleCards.length) {
-    if(chosenCards.length > 1) {
-      
+ 
+
+
+  //función que muestra resultados al ganar
+  function displayResultsWon() {
+    if(cardsMatched.length === shuffleCards.length) {
       const scoreDisplay = document.createElement('div');
       scoreDisplay.className = 'scoreDisplay';
       gameBox.appendChild(scoreDisplay);
@@ -82,9 +83,31 @@ const GameDisplay = () => {
       wonImg.src = 'images/totorowin.gif';
       results.innerText = '¡Ganaste!';
       results.appendChild(wonImg);
-      
     }
   }
+
+  //función que muestra resultados al perder
+  function displayResultsLost(){
+    if(matchAttempts > 6){
+      const scoreDisplay = document.createElement('div');
+        scoreDisplay.className = 'scoreDisplay';
+        gameBox.appendChild(scoreDisplay);
+  
+        const results = document.createElement('div');
+        results.className = 'results';
+        gameBox.appendChild(results);
+  
+        const lostImg = document.createElement('img');
+        lostImg.className = 'lostImg';
+        lostImg.src = 'images/suwatarilose.gif';
+        results.innerText = 'Perdiste. Inténtalo otra vez';
+        results.appendChild(lostImg);
+    }
+    for(let i = 0; i < chosenCards.length; i++) {
+      chosenCards[i].classList.toggle('is-flipped');
+    }
+  }
+
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let card = document.createElement('div');
