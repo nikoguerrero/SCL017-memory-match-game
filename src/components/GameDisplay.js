@@ -25,9 +25,11 @@ const GameDisplay = () => {
   level.innerText = 'NIVEL 1';
   gameBox.appendChild(level);
 
+
   const shuffleCards = shuffle(data);
   const chosenCards = []; //se guardan las cartas cliqueadas
   const cardsMatched = []; //se guardan las cartas que hicieronn match
+ 
 
   // función girar tarjeta
   function flipCard(target){
@@ -51,16 +53,38 @@ const GameDisplay = () => {
         cardsMatched.push(chosenCards[i]);
         chosenCards[i].classList.add('is-matched');
       }
-      console.log(cardsMatched);
+      // displayResults();
     } else {
       for(let i = 0; i < chosenCards.length; i++) {
         chosenCards[i].classList.toggle('is-flipped');
       }
     }
+    displayResults();
     chosenCards.length = 0;
   }
- 
 
+  //funcion para mostrar resultados
+  function displayResults() {
+    // if(cardsMatched.length === shuffleCards.length) {
+    if(chosenCards.length > 1) {
+      
+      const scoreDisplay = document.createElement('div');
+      scoreDisplay.className = 'scoreDisplay';
+      gameBox.appendChild(scoreDisplay);
+
+      const results = document.createElement('div');
+      results.className = 'results';
+      gameBox.appendChild(results);
+      
+
+      const wonImg = document.createElement('img');
+      wonImg.className = 'wonImg';
+      wonImg.src = 'images/totorowin.gif';
+      results.innerText = '¡Ganaste!';
+      results.appendChild(wonImg);
+      
+    }
+  }
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let card = document.createElement('div');
@@ -82,8 +106,6 @@ const GameDisplay = () => {
     card.appendChild(frontCard);
 
     boardCards.appendChild(card);
-
-
   }
 
 

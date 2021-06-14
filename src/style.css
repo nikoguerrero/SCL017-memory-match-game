@@ -154,5 +154,38 @@ body{
     margin-bottom:10px;
 }
 
+.scoreDisplay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    z-index: 10;
+}
 
+.results{
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+    color:blanchedalmond;
+    background-color: #00A5C3;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+}
 
+.wonImg{
+    position:absolute;
+    width: 20%;
+    height: auto;
+    right: 20px;
+    bottom: 15px;
+}
