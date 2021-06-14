@@ -1,8 +1,11 @@
 
-import { shuffle } from './GameLogic.js';
 import howl from '../data/howl/howl.js';
+import { shuffle } from './GameLogic.js';
+import { displayResultsWon, displayResultsLost } from './ResultsDisplay.js';
+
 
 const data = howl.items;
+
 
 const GameDisplay = () => {
   
@@ -57,55 +60,14 @@ const GameDisplay = () => {
       displayResultsWon();
     } else {
       matchAttempts++;
-      displayResultsLost();
+      displayResultsLost(matchAttempts, chosenCards);
     }
     console.log(matchAttempts);
     chosenCards.length = 0;
   }
 
 
-  //función que muestra resultados al ganar
-  function displayResultsWon() {
-    if(cardsMatched.length === shuffleCards.length) {
-      const scoreDisplay = document.createElement('div');
-      scoreDisplay.className = 'scoreDisplay';
-      gameBox.appendChild(scoreDisplay);
-
-      const results = document.createElement('div');
-      results.className = 'results';
-      gameBox.appendChild(results);
-      
-
-      const wonImg = document.createElement('img');
-      wonImg.className = 'wonImg';
-      wonImg.src = 'images/totorowin.gif';
-      results.innerText = '¡Ganaste!';
-      results.appendChild(wonImg);
-    }
-  }
-
-  //función que muestra resultados al perder
-  function displayResultsLost(){
-    if(matchAttempts > 6){
-      const scoreDisplay = document.createElement('div');
-        scoreDisplay.className = 'scoreDisplay';
-        document.getElementById('root').appendChild(scoreDisplay);
-        // gameBox.appendChild(scoreDisplay);
-  
-        const results = document.createElement('div');
-        results.className = 'results';
-        scoreDisplay.appendChild(results);
-  
-        const lostImg = document.createElement('img');
-        lostImg.className = 'lostImg';
-        lostImg.src = 'images/suwatarilose.gif';
-        results.innerText = 'Perdiste. Inténtalo otra vez';
-        results.appendChild(lostImg);
-    }
-    for(let i = 0; i < chosenCards.length; i++) {
-      chosenCards[i].classList.toggle('is-flipped');
-    }
-  }
+ 
 
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
