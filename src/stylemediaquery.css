@@ -63,3 +63,240 @@
         margin-bottom:10px;
     }
 }
+
+/* iPad y KindleFire */
+@media (min-width:375px) and (max-width: 880px) { 
+    body{
+        height: 100vh;
+    }
+}
+
+/* iPhone X */
+@media (max-width: 375px){ 
+    body{
+        background-image: url(./images/mediaquerybackground.png);
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        overflow:hidden;
+        }
+    
+    .header {
+        background-size: 300px;
+        background-position: center;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: right;
+        align-items:center;
+        transition: transform 0.5s cubic-bezier(0.0, -0.55, 0.265, 1.55);
+    }
+
+    .header.is-up{
+        transform: translateY(-30px);
+    }
+
+    .introBox{
+        width: 300px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .castleOne{
+        display: flex;
+        position: relative;
+        animation: float 5s infinite;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+    }
+
+    .gameBox{
+        position:relative;
+        width: 350px;
+        height: 550px;
+        display: flex;
+        align-items: top;
+    }
+    
+    .grid{
+        width: 500px;
+        height: 500px;
+        background: none;
+        border-radius: 22px;
+    }
+
+    .card{
+        width: 86px;
+        height: 100px;
+    }
+
+    .backCard{
+        max-width:  100%;
+        max-height: 100%;
+    }
+    
+    .frontCard{
+        max-width:  100%;
+        max-height: 100%;
+    }
+
+    .level{
+        position:  absolute;
+        bottom: 0;
+        width:  375px;
+        text-align: center;
+        font-size: 1.2rem;
+        justify-content: center;
+    }
+}
+
+/* iPhone 6/7/8 */
+@media (max-width: 375px) and (max-height: 667px) { 
+    .header {
+        width:  100%;
+        height: 100px;
+    }
+
+    .header.is-up{
+        transform:  translateY(-25px);
+    }
+    
+    .introBox{
+        width: 300px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+
+    .castleOne{
+        display: flex;
+        position: relative;
+        animation: float 5s infinite;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+    }
+
+    .gameBox{
+        position: relative;
+        width: 300px;
+        height: 500px;
+        display: flex;
+        align-items: top;
+        transform: translateY(-20px);
+    }
+    
+    .grid{
+        width: 300px;
+        height: 400px;
+        background: none;
+        border-radius: 22px;
+    }
+
+    .card{
+        width: 77px;
+        height: 90px;
+    }
+
+    .backCard{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .frontCard{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .level{
+        position: absolute;
+        margin-bottom: 50px;
+        width: 300px;
+        text-align: center;
+        font-size: 1.2rem;
+        justify-content: center;
+    }
+}
+
+/*Responsive S5*/
+@media (max-width: 360px) and (max-height: 640px) {
+    body{
+     height: 100vh;
+     width: 100%;
+     background-size: cover;
+     } 
+
+    .container{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 100%; 
+    padding-top: 20px;  
+    }
+
+    .header{
+    background-size: 300px;
+    height: 100px;
+    width: 100%;
+    background-position: center;
+    transition: transform 0.5s cubic-bezier(0.0, -0.55, 0.265, 1.55);
+    }
+
+    .header.is-up{
+    transform: translateY(-20px);
+    }
+    
+    .introBox{
+    width: 300px;
+    height: 400px; 
+    }
+    
+    .castleOne{
+    width: 100%;
+    }  
+
+    .gameBox{
+    position: relative;
+    width: 300px;
+    height: 480px;
+    display: flex;
+    align-items: top;
+    }
+
+    .grid{
+    width: 450px;
+    height: 450px;
+    background: none;
+    border-radius: 22px;
+    }  
+
+    .card{
+    width: 75px;
+    height: 89px;
+    } 
+    
+    .backCard{
+    max-width:  100%;
+    max-height: 100%;
+    }
+    
+    .frontCard{
+    max-width:  100%;
+    max-height: 100%;
+    }
+
+    .level{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    justify-content: center;
+    }     
+}
