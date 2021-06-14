@@ -1,7 +1,5 @@
 
-const data = howl.items;
 
-const GameLogic = () => {
 function shuffle(data) {
 
     let gameCards = [];
@@ -24,5 +22,5 @@ function shuffle(data) {
     }
     return gameCards;
   }
-};
-  export default GameLogic;
+  
+export { shuffle };

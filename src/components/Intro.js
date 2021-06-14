@@ -28,11 +28,6 @@ const Intro = () => {
     castle.addEventListener('click', play);
     introBox.appendChild(castle);   //castillo es hijo de introbox
 
-    // const btn = document.createElement('button');
-    // btn.innerHTML = 'Jugar';
-    // btn.className = 'buttonPlay';
-    // introBox.appendChild(btn);  //btn es hijo de introBox
-
     
     return content;
 
