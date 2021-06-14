@@ -63,8 +63,6 @@ const GameDisplay = () => {
     chosenCards.length = 0;
   }
 
- 
-
 
   //función que muestra resultados al ganar
   function displayResultsWon() {
@@ -88,14 +86,15 @@ const GameDisplay = () => {
 
   //función que muestra resultados al perder
   function displayResultsLost(){
-    if(matchAttempts > 6){
+    if(matchAttempts > 0){
       const scoreDisplay = document.createElement('div');
         scoreDisplay.className = 'scoreDisplay';
-        gameBox.appendChild(scoreDisplay);
+        document.getElementById('root').appendChild(scoreDisplay);
+        // gameBox.appendChild(scoreDisplay);
   
         const results = document.createElement('div');
         results.className = 'results';
-        gameBox.appendChild(results);
+        scoreDisplay.appendChild(results);
   
         const lostImg = document.createElement('img');
         lostImg.className = 'lostImg';
