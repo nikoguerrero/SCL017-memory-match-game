@@ -24,19 +24,19 @@ function displayResultsWon(cardsWon, cardsShuffled) {
   function displayResultsLost(attempts, cardsChosen){
     if(attempts > 6){
       const scoreDisplay = document.createElement('div');
-        scoreDisplay.className = 'scoreDisplay';
-        document.getElementById('root').appendChild(scoreDisplay);
-        // gameBox.appendChild(scoreDisplay);
-  
-        const results = document.createElement('div');
-        results.className = 'results';
-        scoreDisplay.appendChild(results);
-  
-        const lostImg = document.createElement('img');
-        lostImg.className = 'lostImg';
-        lostImg.src = 'images/suwatarilose.gif';
-        results.innerText = 'Perdiste. Inténtalo otra vez';
-        results.appendChild(lostImg);
+      scoreDisplay.className = 'scoreDisplay';
+      document.getElementById('root').appendChild(scoreDisplay);
+      // gameBox.appendChild(scoreDisplay);
+
+      const results = document.createElement('div');
+      results.className = 'results';
+      scoreDisplay.appendChild(results);
+
+      const lostImg = document.createElement('img');
+      lostImg.className = 'lostImg';
+      lostImg.src = 'images/suwatarilose.gif';
+      results.innerText = 'Perdiste. Inténtalo otra vez';
+      results.appendChild(lostImg);
     }
   
     for(let i = 0; i < cardsChosen.length; i++) {

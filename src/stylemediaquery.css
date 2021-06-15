@@ -65,14 +65,15 @@
 }
 
 /* iPad y KindleFire */
-@media (min-width:375px) and (max-width: 880px) { 
+@media (min-width:768px) and (max-width: 800px) { 
     body{
         height: 100vh;
+        overflow: hidden;
     }
 }
 
 /* iPhone X */
-@media (max-width: 375px){ 
+@media (max-width: 375px) { 
     body{
         background-image: url(./images/mediaquerybackground.png);
         height: 100vh;
@@ -129,6 +130,18 @@
         height: 500px;
         background: none;
         border-radius: 22px;
+    }
+
+    .failedAttempts{
+        margin: 10px 0px 10px 25px;
+        font-weight:800;
+        font-size: 1remp;
+    }
+    
+    .timerDisplay{
+        margin: 10px 25px 10px auto;
+        font-weight:800;
+        font-size: 1remp;
     }
 
     .card{

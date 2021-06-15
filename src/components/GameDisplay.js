@@ -19,14 +19,29 @@ const GameDisplay = () => {
   grid.className = 'grid';
   gameBox.appendChild(grid); //grid es hijo de gameBox
 
+  const extras = document.createElement('div');
+  extras.className = 'extras';
+  grid.appendChild(extras);
+
+  const failedAttempts = document.createElement('div');
+  failedAttempts.className = 'failedAttempts';
+  failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + '0' + '</span>';
+  extras.appendChild(failedAttempts);
+
+  const timerDisplay = document.createElement('div');
+  timerDisplay.className = 'timerDisplay';
+  timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
+  extras.appendChild(timerDisplay);
+
+
   const boardCards = document.createElement('div');
   boardCards.className = 'boardCards';
   grid.appendChild(boardCards); //boardCards es hijo de grid
 
-  const level = document.createElement('footer');
-  level.className = 'level';
-  level.innerText = 'NIVEL 1';
-  gameBox.appendChild(level);
+  // const level = document.createElement('footer');
+  // level.className = 'level';
+  // level.innerText = 'NIVEL 1';
+  // gameBox.appendChild(level);
 
 
   const shuffleCards = shuffle(data);
@@ -60,11 +75,14 @@ const GameDisplay = () => {
       displayResultsWon(cardsMatched, shuffleCards);
     } else {
       matchAttempts++;
+      failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + '</span>';
       displayResultsLost(matchAttempts, chosenCards);
     }
     console.log(matchAttempts);
     chosenCards.length = 0;
   }
+
+
 
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
