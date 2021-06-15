@@ -57,7 +57,7 @@ const GameDisplay = () => {
         cardsMatched.push(chosenCards[i]);
         chosenCards[i].classList.add('is-matched');
       }
-      displayResultsWon();
+      displayResultsWon(cardsMatched, shuffleCards);
     } else {
       matchAttempts++;
       displayResultsLost(matchAttempts, chosenCards);
@@ -65,9 +65,6 @@ const GameDisplay = () => {
     console.log(matchAttempts);
     chosenCards.length = 0;
   }
-
-
- 
 
   //display de cartas en pantalla (iteración)
   for(let i = shuffleCards.length - 1; i >= 0; i--) {

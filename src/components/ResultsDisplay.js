@@ -1,15 +1,15 @@
 
 
 //función que muestra resultados al ganar
-function displayResultsWon() {
-    if(cardsMatched.length === shuffleCards.length) {
+function displayResultsWon(cardsWon, cardsShuffled) {
+    if(cardsWon.length === cardsShuffled.length) {
       const scoreDisplay = document.createElement('div');
       scoreDisplay.className = 'scoreDisplay';
-      gameBox.appendChild(scoreDisplay);
+      document.getElementById('root').appendChild(scoreDisplay);
   
       const results = document.createElement('div');
       results.className = 'results';
-      gameBox.appendChild(results);
+      scoreDisplay.appendChild(results);
       
   
       const wonImg = document.createElement('img');
