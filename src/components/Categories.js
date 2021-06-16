@@ -1,5 +1,6 @@
 import howl from '../data/howl/howl.js';
 import totoro from '../data/totoro/totoro.js';
+import spirited from '../data/spirited/spirited.js';
 import GameDisplay from './GameDisplay.js';
 
 
@@ -25,14 +26,14 @@ const Categories = () => {
     categoryBox.appendChild(article);
     
 
-    const buttonHowl = createButton('CARTAS 1', howl.items);
-    const buttonTotoro = createButton('CARTAS 2', totoro.items);
-    // const buttonSpirited = createButton('CARTAS 3');
+    const buttonHowl = createButton('El castillo ambulante', howl.items);
+    const buttonTotoro = createButton('Mi vecino Totoro', totoro.items);
+    const buttonSpirited = createButton('El viaje de Chihiro', spirited.items);
     // const buttonKiki = createButton('CARTAS 4');
 
     article.appendChild(buttonHowl);
     article.appendChild(buttonTotoro);
-    // article.appendChild(buttonSpirited);
+    article.appendChild(buttonSpirited);
     // article.appendChild(buttonKiki);
 
 
