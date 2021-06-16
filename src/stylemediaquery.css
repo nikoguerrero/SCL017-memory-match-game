@@ -34,10 +34,23 @@
     
     .grid{
         width: 300px;
-        height: 450px;
+        height: 500px;
         border-radius: 22px;
         justify-content: center;
     }
+
+    .failedAttempts{
+        margin: 10px 0px 10px 25px;
+        font-weight:800;
+        font-size: 1remp;
+    }
+    
+    .timerDisplay{
+        margin: 10px 25px 10px auto;
+        font-weight:800;
+        font-size: 1remp;
+    }
+
 
     .card{
         width: 77px;
