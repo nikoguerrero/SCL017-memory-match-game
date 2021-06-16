@@ -27,7 +27,7 @@ const GameDisplay = () => {
 
   const failedAttempts = document.createElement('div');
   failedAttempts.className = 'failedAttempts';
-  failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + '0' + ' / ' + '7 ' + '</span>';
+  failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + '0' + ' / ' + '10 ' + '</span>';
   extras.appendChild(failedAttempts);
 
   const timerDisplay = document.createElement('div');
@@ -66,6 +66,7 @@ const GameDisplay = () => {
   }
 
   let matchAttempts = 0;
+  let score = 100;
 
   //función compara match (con alerta que indica match por ahora)
   function matchCard(){
@@ -74,13 +75,14 @@ const GameDisplay = () => {
         cardsMatched.push(chosenCards[i]);
         chosenCards[i].classList.add('is-matched');
       }
-      displayResultsWon(cardsMatched, shuffleCards);
+      displayResultsWon(cardsMatched, shuffleCards, score);
     } else {
       matchAttempts++;
-      failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + ' / ' + '7 ' + '</span>';
+      failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + ' / ' + '10 ' + '</span>';
+      score-=10;
       displayResultsLost(matchAttempts, chosenCards);
     }
-    console.log(matchAttempts);
+    console.log(score);
     chosenCards.length = 0;
   }
 
