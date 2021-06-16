@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;900&display=swap');
 
 
-
-/*Fondo y apariencia general*/
 body{
     margin: 0px;
     padding: 0px;
     /* height: 100vh; */
-    height: 100%;
-    width: 100%;
     background-image: url(./images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,16 +17,11 @@ body{
     /* Prevenir que seleccione texto */
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Versiones viejas de Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                supported by Chrome, Edge, Opera and Firefox */
-
-    
+    user-select: none; 
 }
 
-/*Titulo*/
 .header{
     background-image: url(./images/title.png); 
     width: 486px;
@@ -40,7 +31,6 @@ body{
     justify-content: center;
 }
 
-/* Caja de contenido intro */
 .introBox{
     width: 486px;
     height: 674px;
@@ -53,7 +43,6 @@ body{
     transform: scale(1.05);  
 }
 
-/*Animación del botón castillo*/
 .castleOne{
     display: flex;
     position: relative;
@@ -70,13 +59,11 @@ body{
     100% {transform: translateY(0px);}
 }
 
-/* Tablero de cartas */
 .gameBox{
     width: 486px;
     height: 674px;
 }
 
-/*Grilla de cartas*/
 .grid{
     display: grid;
     width: 100%;

@@ -1,4 +1,5 @@
-import GameDisplay from './GameDisplay.js'
+// import GameDisplay from './GameDisplay.js'
+import Categories from './Categories.js';
 
 
 const Intro = () => {
@@ -10,7 +11,7 @@ const Intro = () => {
         introBox.style.display = 'none';
 
         // archivo GameDisplay en acción
-        document.getElementById('root').appendChild(GameDisplay());
+        document.getElementById('root').appendChild(Categories());
     }
     
     const content = document.createElement('div');

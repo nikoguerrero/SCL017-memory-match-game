@@ -1,12 +1,12 @@
 
-// import howl from '../data/howl/howl.js';
-import totoro from '../data/totoro/totoro.js';
+import howl from '../data/howl/howl.js';
+// import totoro from '../data/totoro/totoro.js';
 import { shuffle } from './GameLogic.js';
-import { displayResultsWon, displayResultsLost } from './ResultsDisplay.js';
+import { displayResultsWon, displayResultsLost } from './ScoreDisplay.js';
 
 
-// const data = howl.items;
-const data = totoro.items;
+const data = howl.items;
+// const data = totoro.items;
 
 
 const GameDisplay = () => {
