@@ -1,10 +1,12 @@
 
-import howl from '../data/howl/howl.js';
+// import howl from '../data/howl/howl.js';
+import totoro from '../data/totoro/totoro.js';
 import { shuffle } from './GameLogic.js';
 import { displayResultsWon, displayResultsLost } from './ResultsDisplay.js';
 
 
-const data = howl.items;
+// const data = howl.items;
+const data = totoro.items;
 
 
 const GameDisplay = () => {
@@ -25,7 +27,7 @@ const GameDisplay = () => {
 
   const failedAttempts = document.createElement('div');
   failedAttempts.className = 'failedAttempts';
-  failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + '0' + '</span>';
+  failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + '0' + ' / ' + '7 ' + '</span>';
   extras.appendChild(failedAttempts);
 
   const timerDisplay = document.createElement('div');
@@ -75,7 +77,7 @@ const GameDisplay = () => {
       displayResultsWon(cardsMatched, shuffleCards);
     } else {
       matchAttempts++;
-      failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + '</span>';
+      failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + ' / ' + '7 ' + '</span>';
       displayResultsLost(matchAttempts, chosenCards);
     }
     console.log(matchAttempts);

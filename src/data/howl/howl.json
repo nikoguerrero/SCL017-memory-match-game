@@ -2,7 +2,7 @@
     "name": "Howl",
     "items": [
       {
-        "id": "calucipher",
+        "id": "calcipher",
         "image": "data/howl/images/calcipher.png",
         "bgColor": "#ffffff"
       },
