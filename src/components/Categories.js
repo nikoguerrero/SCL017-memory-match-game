@@ -27,13 +27,13 @@ const Categories = () => {
 
     const buttonHowl = createButton('CARTAS 1', howl.items);
     const buttonTotoro = createButton('CARTAS 2', totoro.items);
-    const buttonSpirited = createButton('CARTAS 3');
-    const buttonKiki = createButton('CARTAS 4');
+    // const buttonSpirited = createButton('CARTAS 3');
+    // const buttonKiki = createButton('CARTAS 4');
 
     article.appendChild(buttonHowl);
     article.appendChild(buttonTotoro);
-    article.appendChild(buttonSpirited);
-    article.appendChild(buttonKiki);
+    // article.appendChild(buttonSpirited);
+    // article.appendChild(buttonKiki);
 
 
     return categoryBox;
