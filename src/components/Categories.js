@@ -7,15 +7,15 @@ import GameDisplay from './GameDisplay.js';
 
 const Categories = () => {
 
-    const createButton = (text, data) => {
-        let btn = document.createElement('button');
-        btn.innerText = text;
-        btn.src = 'images/backcard.png';
-        btn.addEventListener('click', function () {
+    const createButton = (image, data) => {
+        let cardSet = document.createElement('img');
+        cardSet.className = 'cardSet';
+        cardSet.src = image;
+        cardSet.addEventListener('click', function () {
             categoryBox.style.display = 'none';
             document.getElementById('root').appendChild(GameDisplay(data));
             });
-        return btn;
+        return cardSet;
     }
 
     const content = document.createElement('div');
@@ -28,15 +28,15 @@ const Categories = () => {
     categoryBox.appendChild(article);
     
 
-    const buttonHowl = createButton('El castillo ambulante',  howl.items);
-    const buttonTotoro = createButton('Mi vecino Totoro', totoro.items);
-    const buttonSpirited = createButton('El viaje de Chihiro', spirited.items);
-    const buttonMononoke = createButton('La princesa Mononoke', mononoke.items);
+    const setHowl = createButton('images/howlsmovingcastle.png', howl.items);
+    const setTotoro = createButton('images/myneighbortotoro.png', totoro.items);
+    const setSpirited = createButton('images/spiritedaway.png', spirited.items);
+    const setMononoke = createButton('images/princessmononoke.png', mononoke.items);
 
-    article.appendChild(buttonHowl);
-    article.appendChild(buttonTotoro);
-    article.appendChild(buttonSpirited);
-    article.appendChild(buttonMononoke);
+    article.appendChild(setHowl);
+    article.appendChild(setTotoro);
+    article.appendChild(setSpirited);
+    article.appendChild(setMononoke);
 
     return categoryBox;
 };
