@@ -1,5 +1,18 @@
+import Categories from './Categories.js';
+// import GameDisplay from './GameDisplay.js';
 
 
+const restartGame = () => {
+    let btn = document.createElement('button');
+    btn.className = 'btn';
+    btn.innerText ='Reiniciar juego';
+    btn.addEventListener('click', function () {
+      // document.getElementById('root').removeChild(GameDisplay());
+      document.getElementById('root').appendChild(Categories());
+      });
+  return btn;
+}    
+    
 //función que muestra resultados al ganar
 function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
     if(cardsWon.length === cardsShuffled.length) {
@@ -16,6 +29,9 @@ function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
       wonImg.src = 'images/totorowin.gif';
       results.innerHTML = '<div class="scoreText"> ¡Ganaste! <br> Obtuviste: <span style=color:#FFCD1C;">' + finalScore + ' puntos</span></br></div>';
       results.appendChild(wonImg);
+
+      const restart = restartGame();
+      results.appendChild(restart);
     }
   }
   
@@ -36,6 +52,9 @@ function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
       lostImg.src = 'images/suwatarilose.gif';
       results.innerHTML = '<div class="scoreText"> Perdiste. <br> Inténtalo otra vez </br></div>';
       results.appendChild(lostImg);
+
+      const restart = restartGame();
+      results.appendChild(restart);
     }
   
     for(let i = 0; i < cardsChosen.length; i++) {

@@ -26,7 +26,7 @@ const GameDisplay = (data) => {
 
   const timerDisplay = document.createElement('div');
   timerDisplay.className = 'timerDisplay';
-  timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
+  timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:30' + '</span>';
   extras.appendChild(timerDisplay);
 
   const boardCards = document.createElement('div');
@@ -53,7 +53,11 @@ const GameDisplay = (data) => {
   //cuando el timer llega a 0
   function timeUp(){
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
-    displayScoreLost(10, chosenCards);
+    
+    //condición evita que aparezca la pantalla de perdiste si se hizo todos los matches
+    if(matchAttempts < 6) {
+      displayScoreLost(10, chosenCards);
+    }
   }
 
   //comienza el timer
