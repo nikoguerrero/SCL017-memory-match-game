@@ -2,10 +2,12 @@
 import Categories from './Categories.js';
 
 
+
 const Intro = () => {
 
     // funcion de click jugar
     const play = () => {
+        
         header.classList.add('is-up');
         // se esconde caja de intro
         introBox.style.display = 'none';

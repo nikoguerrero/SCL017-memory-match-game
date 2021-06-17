@@ -1,7 +1,8 @@
 
 import { shuffle } from './GameLogic.js';
 import { displayResultsWon, displayResultsLost } from './ScoreDisplay.js';
-
+import timer from './Timer.js';
+console.log(timer);
 
 const GameDisplay = (data) => {
   
@@ -26,6 +27,7 @@ const GameDisplay = (data) => {
 
   const timerDisplay = document.createElement('div');
   timerDisplay.className = 'timerDisplay';
+  timerDisplay.id = 'timerDisplay';
   timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
   extras.appendChild(timerDisplay);
 
