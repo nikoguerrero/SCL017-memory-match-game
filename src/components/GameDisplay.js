@@ -9,11 +9,11 @@ const GameDisplay = (data) => {
   
   const gameBox = document.createElement('section');
   gameBox.className = 'gameBox';
-  content.appendChild(gameBox); //gameBox es hijo de content
+  content.appendChild(gameBox); 
 
   const grid = document.createElement('div');
   grid.className = 'grid';
-  gameBox.appendChild(grid); //grid es hijo de gameBox
+  gameBox.appendChild(grid); 
 
   const extras = document.createElement('div');
   extras.className = 'extras';
@@ -29,18 +29,6 @@ const GameDisplay = (data) => {
   timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
   extras.appendChild(timerDisplay);
 
-  function tick(counter) {
-    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + counter + '</span>';
-  }
-
-  function timeUp(){
-    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '0' + '</span>';
-    displayScoreLost(10, chosenCards);
-  }
-
-  startTimer(tick, timeUp);
-
-
   const boardCards = document.createElement('div');
   boardCards.className = 'boardCards';
   grid.appendChild(boardCards); //boardCards es hijo de grid
@@ -50,11 +38,26 @@ const GameDisplay = (data) => {
   // level.innerText = 'NIVEL 1';
   // gameBox.appendChild(level);
 
-
   const shuffleCards = shuffle(data);
   const chosenCards = []; //se guardan las cartas cliqueadas
   const cardsMatched = []; //se guardan las cartas que hicieronn match
+  let matchAttempts = 0; //intentos de hacer match parte en 0
+  let score = 100; //puntaje comienza en 100
  
+
+  function tick(counter) { 
+    let formattedCounter = counter.toString().padStart(2,0); //para formatear el contador a dos dígitos siempre
+    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:' + formattedCounter + '</span>';
+  }
+
+  //cuando el timer llega a 0
+  function timeUp(){
+    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
+    displayScoreLost(10, chosenCards);
+  }
+
+  //comienza el timer
+  startTimer(tick, timeUp);
 
   // función girar tarjeta
   function flipCard(target){
@@ -70,10 +73,7 @@ const GameDisplay = (data) => {
     console.log(chosenCards);
   }
 
-  let matchAttempts = 0;
-  let score = 100;
-
-  //función compara match (con alerta que indica match por ahora)
+  //función compara match 
   function matchCard(){
     if(chosenCards[0].id === chosenCards[1].id) {
       for(let i = 0; i < chosenCards.length; i++) {
@@ -91,9 +91,7 @@ const GameDisplay = (data) => {
     chosenCards.length = 0;
   }
 
-
-
-  //display de cartas en pantalla (iteración)
+  //display de cartas en pantalla
   for(let i = shuffleCards.length - 1; i >= 0; i--) {
     let card = document.createElement('div');
     card.className = 'card';

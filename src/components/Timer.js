@@ -1,8 +1,9 @@
 
 let counter = 30;
-let tickFunction = null; 
-let timeUpFunction = null; 
+let tickFunction = null; // será convertido en función
+let timeUpFunction = null; // será convertido en función
 
+//comienza el timer
 function startTimer(functionTick, functionTimeUp) {
     counter = 30;
     tickFunction = functionTick;
@@ -10,13 +11,14 @@ function startTimer(functionTick, functionTimeUp) {
     setTimeout(runTimer, 1000);
 }
 
+//hace correr el timer 
 function runTimer() {
-    counter--;
-    if (counter > 0) {
+    if (counter  === 0) {
+        timeUpFunction();
+    } else {
+        counter--; 
         setTimeout(runTimer, 1000);
         tickFunction(counter);
-    } else {
-        timeUpFunction();
     }
 }
 

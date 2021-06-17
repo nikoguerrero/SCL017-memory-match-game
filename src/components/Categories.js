@@ -38,17 +38,6 @@ const Categories = () => {
     article.appendChild(buttonSpirited);
     article.appendChild(buttonMononoke);
 
-    let boton = document.createElement('button');
-    let botonImg = document.createElement('img');
-    botonImg.src = 'images/backcard.png';
-    boton.appendChild(botonImg);
-    boton.addEventListener('click', function () {
-        categoryBox.style.display = 'none';
-        document.getElementById('root').appendChild(GameDisplay(data));
-        });
-    categoryBox.appendChild(boton);
-
-    //timer();
     return categoryBox;
 };
 
