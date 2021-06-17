@@ -50,6 +50,11 @@
         "id": "yubaba",
         "image": "data/spirited/images/yubaba.png",
         "bgColor": "#ffffff"
+      },
+      {
+        "id": "friends",
+        "image": "data/spirited/images/friends.png",
+        "bgColor": "#ffffff"
       }
     ]
   }

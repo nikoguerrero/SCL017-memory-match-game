@@ -11,5 +11,6 @@ export default {
       { id: 'radish', image: 'data/spirited/images/radish.png', bgColor: '#ffffff' },
       { id: 'suwataru', image: 'data/spirited/images/suwataru.png', bgColor: '#ffffff' },
       { id: 'yubaba', image: 'data/spirited/images/yubaba.png', bgColor: '#ffffff' },
+      { id: 'friends', image: 'data/spirited/images/friends.png', bgColor: '#ffffff' },
     ],
   };
