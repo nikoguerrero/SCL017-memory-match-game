@@ -1,8 +1,7 @@
 
 import { shuffle } from './GameLogic.js';
-import { displayResultsWon, displayResultsLost } from './ScoreDisplay.js';
-import timer from './Timer.js';
-console.log(timer);
+import { displayScoreWon, displayScoreLost } from './ScoreDisplay.js';
+import { startTimer } from './Timer.js';
 
 const GameDisplay = (data) => {
   
@@ -27,9 +26,19 @@ const GameDisplay = (data) => {
 
   const timerDisplay = document.createElement('div');
   timerDisplay.className = 'timerDisplay';
-  timerDisplay.id = 'timerDisplay';
   timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
   extras.appendChild(timerDisplay);
+
+  function tick(counter) {
+    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + counter + '</span>';
+  }
+
+  function timeUp(){
+    timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '0' + '</span>';
+    displayScoreLost(10, chosenCards);
+  }
+
+  startTimer(tick, timeUp);
 
 
   const boardCards = document.createElement('div');
@@ -71,12 +80,12 @@ const GameDisplay = (data) => {
         cardsMatched.push(chosenCards[i]);
         chosenCards[i].classList.add('is-matched');
       }
-      displayResultsWon(cardsMatched, shuffleCards, score);
+      displayScoreWon(cardsMatched, shuffleCards, score);
     } else {
       matchAttempts++;
       failedAttempts.innerHTML = 'GIROS <span style="color:#FFCD1C;">' + matchAttempts + ' / ' + '10 ' + '</span>';
       score-=10;
-      displayResultsLost(matchAttempts, chosenCards);
+      displayScoreLost(matchAttempts, chosenCards);
     }
     console.log(score);
     chosenCards.length = 0;

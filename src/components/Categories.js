@@ -3,8 +3,6 @@ import totoro from '../data/totoro/totoro.js';
 import spirited from '../data/spirited/spirited.js';
 import mononoke from '../data/mononoke/mononoke.js';
 import GameDisplay from './GameDisplay.js';
-import timer from './Timer.js';
-console.log(timer);
 
 
 const Categories = () => {

@@ -1,18 +1,23 @@
 
-function timer() {
-let secondStart = 30;
+let counter = 30;
+let tickFunction = null; 
+let timeUpFunction = null; 
 
-console.log('HOLAA');
-document.getElementById('timerDisplay').innerHTML = secondStart;
-
-if(secondStart == 0) {
-    document.getElementById('timerDisplay').innerHTML = 'PERDISTE';    
-} else{
-    secondStart = secondStart -1;
-    setTimeout(timer, 1000);
+function startTimer(functionTick, functionTimeUp) {
+    counter = 30;
+    tickFunction = functionTick;
+    timeUpFunction = functionTimeUp;
+    setTimeout(runTimer, 1000);
 }
 
+function runTimer() {
+    counter--;
+    if (counter > 0) {
+        setTimeout(runTimer, 1000);
+        tickFunction(counter);
+    } else {
+        timeUpFunction();
+    }
 }
 
-
-export default timer;
+export { startTimer };

@@ -1,7 +1,7 @@
 
 
 //función que muestra resultados al ganar
-function displayResultsWon(cardsWon, cardsShuffled, finalScore) {
+function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
     if(cardsWon.length === cardsShuffled.length) {
       const scoreDisplay = document.createElement('div');
       scoreDisplay.className = 'scoreDisplay';
@@ -20,7 +20,7 @@ function displayResultsWon(cardsWon, cardsShuffled, finalScore) {
   }
   
   //función que muestra resultados al perder
-  function displayResultsLost(attempts, cardsChosen){
+  function displayScoreLost(attempts, cardsChosen){
     if(attempts > 9){
       const scoreDisplay = document.createElement('div');
       scoreDisplay.className = 'scoreDisplay';
@@ -43,4 +43,4 @@ function displayResultsWon(cardsWon, cardsShuffled, finalScore) {
     }
   }
 
-  export { displayResultsWon, displayResultsLost };
+  export { displayScoreWon, displayScoreLost };
