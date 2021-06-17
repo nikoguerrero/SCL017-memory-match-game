@@ -10,6 +10,7 @@ export default {
       { id: 'sophie', image: 'data/howl/images/sophie.png', bgColor: '#ffffff' },
       { id: 'thewitch', image: 'data/howl/images/thewitch.png', bgColor: '#ffffff' },
       { id: 'turniphead', image: 'data/howl/images/turniphead.png', bgColor: '#ffffff' },
+      { id: 'howlandsophie', image: 'data/howl/images/howlandsophie.png', bgColor: '#ffffff' },
     ],
   };
 

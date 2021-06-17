@@ -45,6 +45,11 @@
         "id": "turniphead",
         "image": "data/howl/images/turniphead.png",
         "bgColor": "#ffffff"
+      },
+      {
+        "id": "howlandsophie",
+        "image": "data/howl/images/howlandsophie.png",
+        "bgColor": "#ffffff"
       }
     ]
   }
