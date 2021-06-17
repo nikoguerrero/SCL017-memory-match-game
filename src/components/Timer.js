@@ -1,8 +1,7 @@
-import GameDisplay from './GameDisplay.js'
-import intro from './Intro.js';
 
 function timer() {
 let secondStart = 30;
+console.log('HOLAA');
 document.getElementById('timerDisplay').innerHTML = secondStart;
 
 if(secondStart == 0) {

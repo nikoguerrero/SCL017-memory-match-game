@@ -1,7 +1,8 @@
 
 import { shuffle } from './GameLogic.js';
 import { displayResultsWon, displayResultsLost } from './ScoreDisplay.js';
-
+import timer from './Timer.js';
+console.log(timer);
 
 const GameDisplay = (data) => {
   
