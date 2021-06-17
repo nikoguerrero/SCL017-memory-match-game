@@ -10,6 +10,7 @@ const Categories = () => {
     const createButton = (text, data) => {
         let btn = document.createElement('button');
         btn.innerText = text;
+        btn.src = 'images/backcard.png';
         btn.addEventListener('click', function () {
             categoryBox.style.display = 'none';
             document.getElementById('root').appendChild(GameDisplay(data));
@@ -27,7 +28,7 @@ const Categories = () => {
     categoryBox.appendChild(article);
     
 
-    const buttonHowl = createButton('El castillo ambulante', howl.items);
+    const buttonHowl = createButton('El castillo ambulante',  howl.items);
     const buttonTotoro = createButton('Mi vecino Totoro', totoro.items);
     const buttonSpirited = createButton('El viaje de Chihiro', spirited.items);
     const buttonMononoke = createButton('La princesa Mononoke', mononoke.items);
@@ -36,6 +37,16 @@ const Categories = () => {
     article.appendChild(buttonTotoro);
     article.appendChild(buttonSpirited);
     article.appendChild(buttonMononoke);
+
+    let boton = document.createElement('button');
+    let botonImg = document.createElement('img');
+    botonImg.src = 'images/backcard.png';
+    boton.appendChild(botonImg);
+    boton.addEventListener('click', function () {
+        categoryBox.style.display = 'none';
+        document.getElementById('root').appendChild(GameDisplay(data));
+        });
+    categoryBox.appendChild(boton);
 
 
     return categoryBox;
