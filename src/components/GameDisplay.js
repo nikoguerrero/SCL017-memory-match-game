@@ -9,6 +9,7 @@ const GameDisplay = (data) => {
   
   const gameBox = document.createElement('section');
   gameBox.className = 'gameBox';
+  gameBox.id = 'gameBox';
   content.appendChild(gameBox); 
 
   const grid = document.createElement('div');
@@ -53,11 +54,9 @@ const GameDisplay = (data) => {
   //cuando el timer llega a 0
   function timeUp(){
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
-    
-    //condición evita que aparezca la pantalla de perdiste si se hizo todos los matches
-    if(matchAttempts < 6) {
-      displayScoreLost(10, chosenCards);
-    }
+    // if(displayScoreWon === false) {
+    displayScoreLost(10, chosenCards);
+    // }
   }
 
   //comienza el timer

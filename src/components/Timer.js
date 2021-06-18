@@ -2,10 +2,12 @@
 let counter = 30;
 let tickFunction = null; // será convertido en función
 let timeUpFunction = null; // será convertido en función
+let shouldTimerStop = false;
 
 //comienza el timer
 function startTimer(functionTick, functionTimeUp) {
-    counter = 30;
+    shouldTimerStop = false;
+    counter = 1;
     tickFunction = functionTick;
     timeUpFunction = functionTimeUp;
     setTimeout(runTimer, 1000);
@@ -13,13 +15,19 @@ function startTimer(functionTick, functionTimeUp) {
 
 //hace correr el timer 
 function runTimer() {
-    if (counter  === 0) {
+    if(shouldTimerStop === false) {
+        if (counter  === 0) {
         timeUpFunction();
-    } else {
+        } else {
         counter--; 
         setTimeout(runTimer, 1000);
         tickFunction(counter);
+        }
     }
 }
 
-export { startTimer };
+//detiene el timer
+function stopTimer(){
+  shouldTimerStop = true;
+}
+export { startTimer, stopTimer };
