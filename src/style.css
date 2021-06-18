@@ -89,6 +89,7 @@ body{
     border: 2px solid blanchedalmond;
     overflow:hidden;
     margin: -10px;
+    cursor:pointer;
 }
 
 .gameBox{
@@ -231,8 +232,16 @@ body{
 }
 
 .scoreText{
-    padding-top: 70px;
+    padding-top: 45px;
     text-shadow:1px 1px black;
+}
+
+.wonImg{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    right: 20px;
+    bottom: 20px;
 }
 
 .lostImg{
@@ -241,13 +250,21 @@ body{
     height: auto;
     right: 15px;
     bottom: 10px;
-
 }
 
-.wonImg{
-    position: absolute;
-    width: 20%;
-    height: auto;
-    right: 20px;
-    bottom: 15px;
+.btn{
+    background-color:#FFCD1C;
+    color:#493936;
+    border: 2px solid blanchedalmond;
+    border-radius:15px;
+    margin:10px 0px 10px 0px;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Roboto';
+    font-size: 0.7rem;
+}
+
+.btn:hover{
+    background:#00A5C3;
+    color:blanchedalmond;
+    cursor:pointer;
 }

@@ -7,7 +7,7 @@ let shouldTimerStop = false;
 //comienza el timer
 function startTimer(functionTick, functionTimeUp) {
     shouldTimerStop = false;
-    counter = 1;
+    counter = 30;
     tickFunction = functionTick;
     timeUpFunction = functionTimeUp;
     setTimeout(runTimer, 1000);
