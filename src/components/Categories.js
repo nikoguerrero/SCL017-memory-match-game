@@ -8,14 +8,29 @@ import GameDisplay from './GameDisplay.js';
 const Categories = () => {
 
     const createButton = (image, data) => {
-        let cardSet = document.createElement('img');
-        cardSet.className = 'cardSet';
-        cardSet.src = image;
-        cardSet.addEventListener('click', function () {
+        let cardHolder = document.createElement('div');
+        cardHolder.className = 'cardHolder';
+        cardHolder.addEventListener('click', function () {
             categoryBox.style.display = 'none';
             document.getElementById('root').appendChild(GameDisplay(data));
             });
-        return cardSet;
+        article.appendChild(cardHolder);
+
+        let cardSet = document.createElement('img');
+        cardSet.className = 'cardSet';
+        cardSet.src = image;
+        cardHolder.appendChild(cardSet);
+
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        cardHolder.appendChild(overlay);
+
+        const textCard = document.createElement('div');
+        textCard.className = 'textCard';
+        textCard.innerHTML = 'EL CASTILLO AMBULANTE';
+        overlay.appendChild(textCard);
+
+        return cardHolder;
     }
 
     const content = document.createElement('div');

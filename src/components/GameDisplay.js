@@ -54,9 +54,7 @@ const GameDisplay = (data) => {
   //cuando el timer llega a 0
   function timeUp(){
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
-    // if(displayScoreWon === false) {
     displayScoreLost(10, chosenCards);
-    // }
   }
 
   //comienza el timer
