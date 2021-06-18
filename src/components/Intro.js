@@ -1,4 +1,3 @@
-// import GameDisplay from './GameDisplay.js'
 import Categories from './Categories.js';
 
 

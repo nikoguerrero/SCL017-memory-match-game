@@ -1,19 +1,22 @@
-import howl from '../data/howl/howl.js';
-import totoro from '../data/totoro/totoro.js';
-import spirited from '../data/spirited/spirited.js';
-import mononoke from '../data/mononoke/mononoke.js';
 import GameDisplay from './GameDisplay.js';
 
 
 const Categories = () => {
 
-    const createButton = (image, data) => {
+    const createButton = (image, dataURL) => {
         let cardHolder = document.createElement('div');
         cardHolder.className = 'cardHolder';
         cardHolder.addEventListener('click', function () {
             categoryBox.style.display = 'none';
-            document.getElementById('root').appendChild(GameDisplay(data));
-            });
+        
+            const showGameDisplay = (data) => {
+                document.getElementById('root').appendChild(GameDisplay(data.items));
+            };
+
+            fetch(dataURL)
+                .then(response => response.json())
+                .then(data => showGameDisplay(data));
+        });
         article.appendChild(cardHolder);
 
         let cardSet = document.createElement('img');
@@ -43,10 +46,10 @@ const Categories = () => {
     categoryBox.appendChild(article);
     
 
-    const setHowl = createButton('images/howlsmovingcastle.png', howl.items);
-    const setTotoro = createButton('images/myneighbortotoro.png', totoro.items);
-    const setSpirited = createButton('images/spiritedaway.png', spirited.items);
-    const setMononoke = createButton('images/princessmononoke.png', mononoke.items);
+    const setHowl = createButton('images/howlsmovingcastle.png', '../data/howl/howl.json');
+    const setTotoro = createButton('images/myneighbortotoro.png', '../data/totoro/totoro.json');
+    const setSpirited = createButton('images/spiritedaway.png', '../data/spirited/spirited.json');
+    const setMononoke = createButton('images/princessmononoke.png', '../data/mononoke/mononoke.json');
 
     article.appendChild(setHowl);
     article.appendChild(setTotoro);

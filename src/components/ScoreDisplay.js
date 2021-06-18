@@ -11,7 +11,7 @@ const restartGame = () => {
       document.getElementById('root').removeChild(scoreDisplay);
       document.getElementById('root').removeChild(gameBox);
       document.getElementById('root').appendChild(Categories());
-      });
+    });
   return btn;
 }    
 
@@ -38,6 +38,7 @@ const createElements = (classType, image, text) => {
 
   return scoreDisplay;
 }
+
 //función que muestra resultados al ganar
 function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
     if(cardsWon.length === cardsShuffled.length) {
