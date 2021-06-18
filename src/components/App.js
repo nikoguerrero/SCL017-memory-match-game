@@ -1,6 +1,4 @@
-
 import Intro from './Intro.js';
-
 
 const App = () => {
   
@@ -10,9 +8,7 @@ const App = () => {
   header.className = 'header';
   content.appendChild(header);
 
-
   return Intro();
-  
 };
 
 export default App;

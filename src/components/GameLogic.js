@@ -1,7 +1,6 @@
 
 
-function shuffle(data) {
-
+const shuffle = (data) => {
     let gameCards = [];
   
     while(gameCards.length < 12) {

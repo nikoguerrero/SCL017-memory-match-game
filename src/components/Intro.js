@@ -1,7 +1,5 @@
 import Categories from './Categories.js';
 
-
-
 const Intro = () => {
 
     // funcion de click jugar
@@ -29,10 +27,8 @@ const Intro = () => {
     castle.src = '/images/castleplay.png';
     castle.addEventListener('click', play);
     introBox.appendChild(castle);   //castillo es hijo de introbox
-
     
     return content;
-
 };
 
 export default Intro;

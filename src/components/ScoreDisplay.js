@@ -33,14 +33,12 @@ const createElements = (classType, image, text) => {
 
   const restart = restartGame();
   results.appendChild(restart);
-  
-  
 
   return scoreDisplay;
 }
 
 //función que muestra resultados al ganar
-function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
+const displayScoreWon = (cardsWon, cardsShuffled, finalScore) => {
     if(cardsWon.length === cardsShuffled.length) {
       stopTimer();
       const wonDisplay = createElements('wonImg', 'images/totorowin.gif', '<div class="scoreText"> ¡Ganaste! <br> Obtuviste: <span style=color:#FFCD1C;">' + finalScore + ' puntos</span></br></div>')
@@ -49,7 +47,7 @@ function displayScoreWon(cardsWon, cardsShuffled, finalScore) {
   }
   
   //función que muestra resultados al perder
-  function displayScoreLost(attempts, cardsChosen){
+const displayScoreLost = (attempts, cardsChosen) => {
     if(attempts > 9){
       stopTimer();
       const lostDisplay = createElements('lostImg', 'images/suwatarilose.gif', '<div class="scoreText"> Perdiste. <br> Inténtalo otra vez </br></div>')

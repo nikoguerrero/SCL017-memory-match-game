@@ -3,7 +3,7 @@ import GameDisplay from './GameDisplay.js';
 
 const Categories = () => {
 
-    const createButton = (image, dataURL) => {
+    const createSet = (image, dataURL, text) => {
         let cardHolder = document.createElement('div');
         cardHolder.className = 'cardHolder';
         cardHolder.addEventListener('click', function () {
@@ -30,7 +30,7 @@ const Categories = () => {
 
         const textCard = document.createElement('div');
         textCard.className = 'textCard';
-        textCard.innerHTML = 'EL CASTILLO AMBULANTE';
+        textCard.innerHTML = text;
         overlay.appendChild(textCard);
 
         return cardHolder;
@@ -46,10 +46,10 @@ const Categories = () => {
     categoryBox.appendChild(article);
     
 
-    const setHowl = createButton('images/howlsmovingcastle.png', '../data/howl/howl.json');
-    const setTotoro = createButton('images/myneighbortotoro.png', '../data/totoro/totoro.json');
-    const setSpirited = createButton('images/spiritedaway.png', '../data/spirited/spirited.json');
-    const setMononoke = createButton('images/princessmononoke.png', '../data/mononoke/mononoke.json');
+    const setHowl = createSet('images/howlsmovingcastle.png', '../data/howl/howl.json', 'El castillo ambulante');
+    const setTotoro = createSet('images/myneighbortotoro.png', '../data/totoro/totoro.json', 'Mi vecino Totoro');
+    const setSpirited = createSet('images/spiritedaway.png', '../data/spirited/spirited.json', 'El viaje de Chihiro');
+    const setMononoke = createSet('images/princessmononoke.png', '../data/mononoke/mononoke.json', 'La princesa Mononoke');
 
     article.appendChild(setHowl);
     article.appendChild(setTotoro);

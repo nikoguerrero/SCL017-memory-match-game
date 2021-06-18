@@ -46,13 +46,13 @@ const GameDisplay = (data) => {
   let score = 100; //puntaje comienza en 100
  
 
-  function tick(counter) { 
+  const tick = (counter) => { 
     let formattedCounter = counter.toString().padStart(2,0); //para formatear el contador a dos dígitos siempre
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:' + formattedCounter + '</span>';
   }
 
   //cuando el timer llega a 0
-  function timeUp(){
+  const timeUp = () => {
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
     displayScoreLost(10, chosenCards);
   }
@@ -61,7 +61,7 @@ const GameDisplay = (data) => {
   startTimer(tick, timeUp);
 
   // función girar tarjeta
-  function flipCard(target){
+  const flipCard = (target) => {
 
     //Limita el array a dos elementos. Evita hacer match con la misma carta. Y evita volver a acceder a las cartas que ya hicieron
     if(chosenCards.length < 2 && !chosenCards.includes(target) && !cardsMatched.includes(target)) {
@@ -75,7 +75,7 @@ const GameDisplay = (data) => {
   }
 
   //función compara match 
-  function matchCard(){
+  const matchCard = () => {
     if(chosenCards[0].id === chosenCards[1].id) {
       for(let i = 0; i < chosenCards.length; i++) {
         cardsMatched.push(chosenCards[i]);
@@ -114,8 +114,6 @@ const GameDisplay = (data) => {
 
     boardCards.appendChild(card);
   }
-
-
   return gameBox;
 };
 
