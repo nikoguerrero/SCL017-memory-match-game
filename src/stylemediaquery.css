@@ -149,15 +149,6 @@
         height: 120px;
     }
 
-    .cardHolder:hover .overlay {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .cardHolder:active .overlay{
-        background:black;
-    }
-
     .gameBox{
         position:relative;
         width: 350px;
