@@ -31,7 +31,7 @@
         height: 500px;
     }
 
-    .cardSet{
+    .cardHolder {
         width: 120px;
         height: 120px;
     }
@@ -137,6 +137,25 @@
         cursor: pointer;
         width: 100%;
         height: auto;
+    }
+
+    .categoryBox{
+        width: 300px;
+        height: 400px;
+    }
+
+    .cardHolder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cardHolder:hover .overlay {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .cardHolder:active .overlay{
+        background:black;
     }
 
     .gameBox{
