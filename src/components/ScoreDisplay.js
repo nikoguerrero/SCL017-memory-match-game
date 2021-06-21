@@ -1,4 +1,4 @@
-import Categories from './Categories.js';
+import Categories from './CategoriesDisplay.js';
 import { stopTimer } from './Timer.js';
 
 const restartGame = () => {
@@ -13,7 +13,7 @@ const restartGame = () => {
       document.getElementById('root').appendChild(Categories());
     });
   return btn;
-}    
+};    
 
 const createElements = (classType, image, text) => {
   const scoreDisplay = document.createElement('div');
@@ -35,7 +35,7 @@ const createElements = (classType, image, text) => {
   results.appendChild(restart);
 
   return scoreDisplay;
-}
+};
 
 //función que muestra resultados al ganar
 const displayScoreWon = (cardsWon, cardsShuffled, finalScore) => {
@@ -44,7 +44,7 @@ const displayScoreWon = (cardsWon, cardsShuffled, finalScore) => {
       const wonDisplay = createElements('wonImg', 'images/totorowin.gif', '<div class="scoreText"> ¡Ganaste! <br> Obtuviste: <span style=color:#FFCD1C;">' + finalScore + ' puntos</span></br></div>')
       document.getElementById('root').appendChild(wonDisplay);
     }
-  }
+};
   
   //función que muestra resultados al perder
 const displayScoreLost = (attempts, cardsChosen) => {
@@ -57,6 +57,6 @@ const displayScoreLost = (attempts, cardsChosen) => {
     for(let i = 0; i < cardsChosen.length; i++) {
       cardsChosen[i].classList.toggle('is-flipped');
     }
-  }
+};
 
-  export { displayScoreWon, displayScoreLost };
+export { displayScoreWon, displayScoreLost };

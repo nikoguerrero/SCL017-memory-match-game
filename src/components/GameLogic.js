@@ -1,5 +1,4 @@
 
-
 const shuffle = (data) => {
     let gameCards = [];
   
@@ -20,6 +19,6 @@ const shuffle = (data) => {
       gameCards[j] = temp;
     }
     return gameCards;
-  }
-  
+};
+
 export { shuffle };

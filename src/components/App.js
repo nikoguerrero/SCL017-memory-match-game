@@ -1,4 +1,4 @@
-import Intro from './Intro.js';
+import Intro from './IntroDisplay.js';
 
 const App = () => {
   

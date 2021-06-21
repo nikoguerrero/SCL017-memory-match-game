@@ -49,13 +49,13 @@ const GameDisplay = (data) => {
   const tick = (counter) => { 
     let formattedCounter = counter.toString().padStart(2,0); //para formatear el contador a dos dígitos siempre
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:' + formattedCounter + '</span>';
-  }
+  };
 
   //cuando el timer llega a 0
   const timeUp = () => {
     timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:00' + '</span>';
     displayScoreLost(10, chosenCards);
-  }
+  };
 
   //comienza el timer
   startTimer(tick, timeUp);
@@ -72,7 +72,7 @@ const GameDisplay = (data) => {
       } 
     }
     console.log(chosenCards);
-  }
+  };
 
   //función compara match 
   const matchCard = () => {
@@ -90,7 +90,7 @@ const GameDisplay = (data) => {
     }
     console.log(score);
     chosenCards.length = 0;
-  }
+  };
 
   //display de cartas en pantalla
   for(let i = shuffleCards.length - 1; i >= 0; i--) {

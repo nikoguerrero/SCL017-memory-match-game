@@ -1,4 +1,4 @@
-import Categories from './Categories.js';
+import Categories from './CategoriesDisplay.js';
 
 const Intro = () => {
 
@@ -11,7 +11,7 @@ const Intro = () => {
 
         // archivo GameDisplay en acción
         document.getElementById('root').appendChild(Categories());
-    }
+    };
     
     const content = document.createElement('div');
     const header = document.createElement('header');
