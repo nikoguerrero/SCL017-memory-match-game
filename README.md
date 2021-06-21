@@ -51,6 +51,6 @@ Hacia el final del tercer sprint se realizó un test de usabilidad de nuestro pr
 
 De acuerdo con la información recabada, se detectan los siguientes aspectos a mejorar:
 - Agregar una instrucción más evidente de qué categoría (set de cartas) se desea jugar.
-- Implementar en CSS algo que destaque el cronómetro al iniciar el juego.
+- Implementar en CSS una cualidad que destaque el cronómetro al iniciar el juego.
 
 
