@@ -59,13 +59,13 @@ const Categories = () => {
 
     const setHowl = createSet('images/howlsmovingcastle.png', '../data/howl/howl.json', 'El castillo ambulante');
     const setTotoro = createSet('images/myneighbortotoro.png', '../data/totoro/totoro.json', 'Mi vecino Totoro');
-    const setSpirited = createSet('images/spiritedaway.png', '../data/spirited/spirited.json', 'El viaje de Chihiro');
     const setMononoke = createSet('images/princessmononoke.png', '../data/mononoke/mononoke.json', 'La princesa Mononoke');
+    const setSpirited = createSet('images/spiritedaway.png', '../data/spirited/spirited.json', 'El viaje de Chihiro');
 
     article.appendChild(setHowl);
     article.appendChild(setTotoro);
-    article.appendChild(setSpirited);
     article.appendChild(setMononoke);
+    article.appendChild(setSpirited);
 
     return categoryBox;
 };
