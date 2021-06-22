@@ -31,6 +31,15 @@
         height: 500px;
     }
 
+    .catGrid{
+        height: 400px;
+    }
+    
+    .question{
+        height:30%;
+        font-size: 1rem;
+    }
+
     .cardHolder {
         width: 120px;
         height: 120px;
@@ -142,6 +151,17 @@
     .categoryBox{
         width: 300px;
         height: 400px;
+    }
+
+    .catGrid{
+        height: 350px;
+        margin-top:-50px;
+    }
+    
+    .question{
+        height:30%;
+        font-size: 1rem;
+        padding-bottom:20px;
     }
 
     .cardHolder {

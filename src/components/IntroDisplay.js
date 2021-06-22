@@ -4,12 +4,10 @@ const Intro = () => {
 
     // funcion de click jugar
     const play = () => {
-        
         header.classList.add('is-up');
+
         // se esconde caja de intro
         introBox.style.display = 'none';
-
-        // archivo GameDisplay en acción
         document.getElementById('root').appendChild(Categories());
     };
     

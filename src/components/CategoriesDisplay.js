@@ -39,11 +39,20 @@ const Categories = () => {
     const content = document.createElement('div');
     const categoryBox = document.createElement('section');
     categoryBox.className = 'categoryBox';
-    content.appendChild(categoryBox); 
+    content.appendChild(categoryBox);
+
+    const grid = document.createElement('div');
+    grid.className = 'catGrid';
+    categoryBox.appendChild(grid);
+    
+    const question = document.createElement('div');
+    question.className = 'question';
+    question.innerHTML = 'Elige una categoría'
+    grid.appendChild(question);
 
     const article = document.createElement('article');
     article.className = 'categories';
-    categoryBox.appendChild(article);
+    grid.appendChild(article);
     
 
     const setHowl = createSet('images/howlsmovingcastle.png', '../data/howl/howl.json', 'El castillo ambulante');

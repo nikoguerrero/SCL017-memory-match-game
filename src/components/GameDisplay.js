@@ -34,10 +34,6 @@ const GameDisplay = (data) => {
   boardCards.className = 'boardCards';
   grid.appendChild(boardCards); //boardCards es hijo de grid
 
-  // const level = document.createElement('footer');
-  // level.className = 'level';
-  // level.innerText = 'NIVEL 1';
-  // gameBox.appendChild(level);
 
   const shuffleCards = shuffle(data);
   const chosenCards = []; //se guardan las cartas cliqueadas
