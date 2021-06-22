@@ -4,8 +4,6 @@ const Intro = () => {
 
     // funcion de click jugar
     const play = () => {
-        header.classList.add('is-up');
-
         // se esconde caja de intro
         introBox.style.display = 'none';
         document.getElementById('root').appendChild(Categories());
@@ -14,6 +12,7 @@ const Intro = () => {
     const content = document.createElement('div');
     const header = document.createElement('header');
     header.className = 'header';
+    header.id = 'header';
     content.appendChild(header);
 
     const introBox = document.createElement('section');

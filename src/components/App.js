@@ -6,6 +6,7 @@ const App = () => {
   content.className = 'container';
   const header = document.createElement('header');
   header.className = 'header';
+  header.id = 'header';
   content.appendChild(header);
 
   return Intro();
