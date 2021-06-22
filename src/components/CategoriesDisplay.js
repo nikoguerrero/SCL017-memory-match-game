@@ -7,7 +7,7 @@ const Categories = () => {
         let cardHolder = document.createElement('div');
         cardHolder.className = 'cardHolder';
         cardHolder.addEventListener('click', function () {
-            header = document.getElementById('header');
+            let header = document.getElementById('header');
             header.classList.add('is-up');
             categoryBox.style.display = 'none';
         

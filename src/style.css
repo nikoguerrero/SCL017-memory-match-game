@@ -76,7 +76,8 @@ body{
     flex: 1;
     color:#FFCD1C;
     text-align: center;
-    font-weight: 0;
+    font-family: 'Roboto';
+    font-weight: 900;
     font-size: 1.5rem;
     height:30%;
     padding:50px 0px 0px 0px;
