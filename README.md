@@ -5,7 +5,6 @@
 * [Makkuro Memo](#makuro-memo)
 * [Instrucciones de uso](#instrucciones-de-uso)
 * [Interfaz](#interfaz)
-* [Historias de usuario](#historias-de-usuario)
 * [Prototipos](#prototipos)
 * [Historias de usuario](#historias-de-usuario)
 * [Test de usabilidad](#test-de-usabilidad)
