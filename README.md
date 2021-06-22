@@ -17,7 +17,7 @@ Está dirigido a un público infanto-juvenil, pero con un único nivel de dificu
 
 ## Instrucciones de uso
 Para jugar Makkuro Memo:
-1. Hacer click en botón "jugar"
+1. Hacer clic en botón "jugar"
 2. Elegir categoría (set de cartas) que se desea jugar.
 3. Las cartas estarán boca abajo, por lo que se deberán destapar dos para poder hacer el primer intento de match (emparejar cartas).
 4. Cuando comience el juego, también iniciará un contador regresivo y un conteo de giros fallidos, por lo que se perderá si el contador llega a 0 antes de hacer todos los matches o si se llega al límite de giros fallidos permitidos (10).
@@ -27,9 +27,24 @@ Para jugar Makkuro Memo:
 
 ## Interfaz
 
+![desktop1](https://user-images.githubusercontent.com/83680798/123003812-bec8ba80-d381-11eb-83cf-0b52659d49f2.png)
+
+<details>
+<summary> Clic para ver las siguientes pantallas del juego </summary>
+  
+> ![desktop2](https://user-images.githubusercontent.com/83680798/123003815-bff9e780-d381-11eb-9202-9ae32c4c8a81.png)
+  
+> ![desktop3](https://user-images.githubusercontent.com/83680798/123003820-c1c3ab00-d381-11eb-8bdc-00795cc693e5.png)
+  
+> ![desktop4](https://user-images.githubusercontent.com/83680798/123003823-c25c4180-d381-11eb-9872-1b8cc2a78a29.png)
+</details>
+<br>
+
 ## Prototipos
 
 ### 1. Prototipos baja fidelidad:
+
+
 
 <details>
 <summary> Clic para ver </summary>
@@ -55,15 +70,15 @@ Para jugar Makkuro Memo:
 ```
 CRITERIOS DE ACEPTACIÓN:
 - Sin input.
-- Solo un botón de click que inmediatamente lleva al juego.
-- Cartas inmediatamente desplegadas luego del click.
+- Solo un botón de clic que inmediatamente lleva al juego.
+- Cartas inmediatamente desplegadas luego del clic.
 - Cartas deben estar al azar.
 
 DEFINICIÓN DE TERMINADO
 - Botón jugar implementado.
 - Cartas barajadas al azar con función shuffle.
-- Click debe reconocer ID de elementos y guardar la información.
-- Se deben mostrar las cartas boca arriba al hacer click.
+- Clic debe reconocer ID de elementos y guardar la información.
+- Se deben mostrar las cartas boca arriba al hacer clic.
 - Se implementa un efecto flip.
 
 ```
@@ -90,7 +105,7 @@ CRITERIOS DE ACEPTACIÓN:
 
 DEFINICIÓN DE TERMINADO
 - Función de match implementada.
-- Se corrigen errores y se limita el hacer más de los clicks correspondientes.
+- Se corrigen errores y se limita el hacer más de los clics correspondientes.
 - Se diseña una respuesta evidente al hacer match.
 ```
 
