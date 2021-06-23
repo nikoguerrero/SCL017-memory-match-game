@@ -44,6 +44,9 @@ Para jugar Makkuro Memo:
 
 ### En iPhone 7
 
+<img src="https://user-images.githubusercontent.com/83680798/123159755-60601280-d43b-11eb-8068-cd143a95b5c3.PNG" width="200" height="356" />
+
+
 
 ## Prototipos
 
