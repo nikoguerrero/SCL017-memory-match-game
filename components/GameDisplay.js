@@ -67,7 +67,6 @@ const GameDisplay = (data) => {
         setTimeout(matchCard, 600);
       } 
     }
-    console.log(chosenCards);
   };
 
   //función compara match 
@@ -84,7 +83,6 @@ const GameDisplay = (data) => {
       score-=10;
       displayScoreLost(matchAttempts, chosenCards);
     }
-    console.log(score);
     chosenCards.length = 0;
   };
 
