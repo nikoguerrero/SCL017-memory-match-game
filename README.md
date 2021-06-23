@@ -2,7 +2,7 @@
 
 ## Índice
 
-* [Makkuro Memo](#makuro-memo)
+* [Makkuro Memo](#makkuro-memo)
 * [Instrucciones de uso](#instrucciones-de-uso)
 * [Interfaz](#interfaz)
 * [Prototipos](#prototipos)
@@ -27,6 +27,8 @@ Para jugar Makkuro Memo:
 
 ## Interfaz
 
+### En desktop
+
 ![desktop1](https://user-images.githubusercontent.com/83680798/123003812-bec8ba80-d381-11eb-83cf-0b52659d49f2.png)
 
 <details>
@@ -39,6 +41,12 @@ Para jugar Makkuro Memo:
 > ![desktop4](https://user-images.githubusercontent.com/83680798/123003823-c25c4180-d381-11eb-9872-1b8cc2a78a29.png)
 </details>
 <br>
+
+### En iPhone 7
+
+<img src="https://user-images.githubusercontent.com/83680798/123159755-60601280-d43b-11eb-8068-cd143a95b5c3.PNG" width="200" height="356" />
+
+
 
 ## Prototipos
 
@@ -174,5 +182,8 @@ Hacia el final del tercer sprint se realizó un test de usabilidad de nuestro pr
 De acuerdo con la información recabada, se detectan los siguientes aspectos a mejorar:
 - Agregar una instrucción más evidente de qué categoría (set de cartas) se desea jugar.
 - Implementar en CSS una cualidad que destaque el cronómetro al iniciar el juego.
-
+  
+ ## Enlace
+  
+  https://nikoguerrero.github.io/SCL017-memory-match-game/
 
