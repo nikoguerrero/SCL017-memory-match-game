@@ -10,7 +10,7 @@ const Intro = () => {
 
     const introBox = document.createElement('section');
     introBox.className = 'introBox';
-    content.appendChild(introBox); //introBox es hijo de content
+    content.appendChild(introBox); 
 
     const castle = document.createElement('img');
     castle.className = 'castleOne';
@@ -19,7 +19,7 @@ const Intro = () => {
         introBox.style.display = 'none';
         document.getElementById('root').appendChild(Categories());
     });
-    introBox.appendChild(castle);   //castillo es hijo de introbox
+    introBox.appendChild(castle); 
     
     return content;
 };
