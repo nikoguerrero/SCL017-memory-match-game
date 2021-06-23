@@ -59,4 +59,4 @@ const displayScoreLost = (attempts, cardsChosen) => {
     }
 };
 
-export { displayScoreWon, displayScoreLost };
+export { displayScoreWon, displayScoreLost, createElements };
