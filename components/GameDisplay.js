@@ -32,7 +32,7 @@ const GameDisplay = (data) => {
 
   const boardCards = document.createElement('div');
   boardCards.className = 'boardCards';
-  grid.appendChild(boardCards); //boardCards es hijo de grid
+  grid.appendChild(boardCards);
 
 
   const shuffleCards = shuffle(data);
