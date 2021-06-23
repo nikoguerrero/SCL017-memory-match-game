@@ -1,13 +1,6 @@
 import Categories from './CategoriesDisplay.js';
 
 const Intro = () => {
-
-    // funcion de click jugar
-    const play = () => {
-        // se esconde caja de intro
-        introBox.style.display = 'none';
-        document.getElementById('root').appendChild(Categories());
-    };
     
     const content = document.createElement('div');
     const header = document.createElement('header');
@@ -22,7 +15,10 @@ const Intro = () => {
     const castle = document.createElement('img');
     castle.className = 'castleOne';
     castle.src = '/images/castleplay.png';
-    castle.addEventListener('click', play);
+    castle.addEventListener('click', () => {
+        introBox.style.display = 'none';
+        document.getElementById('root').appendChild(Categories());
+    });
     introBox.appendChild(castle);   //castillo es hijo de introbox
     
     return content;

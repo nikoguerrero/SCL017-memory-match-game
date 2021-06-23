@@ -1,20 +1,20 @@
 
-let counter = 30;
+let counter = 50;
 let tickFunction = null; // será convertido en función
 let timeUpFunction = null; // será convertido en función
 let shouldTimerStop = false;
 
 //comienza el timer
-function startTimer(functionTick, functionTimeUp) {
+const startTimer = (functionTick, functionTimeUp) => {
     shouldTimerStop = false;
-    counter = 30;
+    counter = 50;
     tickFunction = functionTick;
     timeUpFunction = functionTimeUp;
     setTimeout(runTimer, 1000);
 }
 
 //hace correr el timer 
-function runTimer() {
+const runTimer = () => {
     if(shouldTimerStop === false) {
         if (counter  === 0) {
         timeUpFunction();
@@ -27,7 +27,7 @@ function runTimer() {
 }
 
 //detiene el timer
-function stopTimer(){
+const stopTimer = () => {
   shouldTimerStop = true;
 }
 export { startTimer, stopTimer };

@@ -5,7 +5,7 @@ const restartGame = () => {
     let btn = document.createElement('button');
     btn.className = 'btn';
     btn.innerText ='REINICIAR';
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', () => {
       const scoreDisplay = document.getElementById('scoreDisplay');
       const gameBox = document.getElementById('gameBox');
       document.getElementById('root').removeChild(scoreDisplay);
