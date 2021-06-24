@@ -17,7 +17,12 @@ const Categories = () => {
 
             fetch(dataURL)
                 .then(response => response.json())
-                .then(data => showGameDisplay(data));
+                .then(data => { 
+                    showGameDisplay(data);
+                })
+                .catch(error => {
+                    console.error(error);
+                })
         });
         article.appendChild(cardHolder);
 
