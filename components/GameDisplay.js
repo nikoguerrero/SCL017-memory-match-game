@@ -98,7 +98,7 @@ const GameDisplay = (data) => {
 
     let backCard = document.createElement('img');
     backCard.className = 'backCard';
-    backCard.src = 'images/backcard.png';
+    backCard.src = 'images/backcard.webp';
     card.appendChild(backCard);
 
     let frontCard = document.createElement('img');
