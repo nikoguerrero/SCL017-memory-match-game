@@ -22,7 +22,7 @@ Para jugar Makkuro Memo:
 3. Las cartas estarán boca abajo, por lo que se deberán destapar dos para poder hacer el primer intento de match (emparejar cartas).
 4. Cuando comience el juego, también iniciará un contador regresivo y un conteo de giros fallidos, por lo que se perderá si el contador llega a 0 antes de hacer todos los matches o si se llega al límite de giros fallidos permitidos (10).
 5. En caso contrario, si se logra hacer todos los matches a tiempo y dentro del límite de giros, el jugador ganará.
-6. El puntaje que el jugador reciba dependerá de en cuántos intentos logró hacer todos los matches. El puntaje máximo (ningún error) es de 10. Por cada intento fallido, se descuentan 10 puntos.
+6. El puntaje que el jugador reciba dependerá de en cuántos intentos logró hacer todos los matches. El puntaje máximo (ningún error) es de 100. Por cada intento fallido, se descuentan 10 puntos.
 7. Al ganar o perder aparecerá un botón de reiniciar que llevará nuevamente a la pantalla de categorías y que permitirá volver a jugar una partida.
 
 ## Interfaz
