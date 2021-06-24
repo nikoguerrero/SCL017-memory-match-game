@@ -27,12 +27,12 @@ const GameDisplay = (data) => {
 
   const timerDisplay = document.createElement('div');
   timerDisplay.className = 'timerDisplay';
-  timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:50' + '</span>';
+  timerDisplay.innerHTML = 'TIEMPO <span style="color:#FFCD1C;">' + '00:30' + '</span>';
   extras.appendChild(timerDisplay);
 
   const boardCards = document.createElement('div');
   boardCards.className = 'boardCards';
-  grid.appendChild(boardCards); 
+  grid.appendChild(boardCards); //boardCards es hijo de grid
 
 
   const shuffleCards = shuffle(data);
@@ -67,6 +67,7 @@ const GameDisplay = (data) => {
         setTimeout(matchCard, 600);
       } 
     }
+    console.log(chosenCards);
   };
 
   //función compara match 
@@ -83,6 +84,7 @@ const GameDisplay = (data) => {
       score-=10;
       displayScoreLost(matchAttempts, chosenCards);
     }
+    console.log(score);
     chosenCards.length = 0;
   };
 
