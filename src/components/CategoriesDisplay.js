@@ -6,7 +6,7 @@ const Categories = () => {
     const createSet = (image, dataURL, text) => {
         let cardHolder = document.createElement('div');
         cardHolder.className = 'cardHolder';
-        cardHolder.addEventListener('click', function () {
+        cardHolder.addEventListener('click', () => {
             let header = document.getElementById('header');
             header.classList.add('is-up');
             categoryBox.style.display = 'none';
