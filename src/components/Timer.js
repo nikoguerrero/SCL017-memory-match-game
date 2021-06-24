@@ -11,7 +11,7 @@ const startTimer = (functionTick, functionTimeUp) => {
     tickFunction = functionTick;
     timeUpFunction = functionTimeUp;
     setTimeout(runTimer, 1000);
-}
+};
 
 //hace correr el timer 
 const runTimer = () => {
@@ -24,10 +24,11 @@ const runTimer = () => {
         tickFunction(counter);
         }
     }
-}
+};
 
 //detiene el timer
 const stopTimer = () => {
   shouldTimerStop = true;
-}
+};
+
 export { startTimer, stopTimer };
