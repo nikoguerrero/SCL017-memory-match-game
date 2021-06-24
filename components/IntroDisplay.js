@@ -14,7 +14,7 @@ const Intro = () => {
 
     const castle = document.createElement('img');
     castle.className = 'castleOne';
-    castle.src = './images/castleplay.wbp';
+    castle.src = './images/castleplay.webp';
     castle.addEventListener('click', () => {
         introBox.style.display = 'none';
         document.getElementById('root').appendChild(Categories());
