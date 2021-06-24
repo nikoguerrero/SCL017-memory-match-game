@@ -106,7 +106,7 @@
 /* iPhone X */
 @media (max-width: 375px) { 
     body{
-        background-image: url(./images/mediaquerybackground.png);
+        background-image: url(./images/mediaquerybackground.webp);
         height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
